@@ -13,5 +13,8 @@
 </script>
 
 <style>
+@import url("./static/css/public.css");
+@import url("./static/css/myIcon.css");
 	/*每个页面公共css */
+
 </style>

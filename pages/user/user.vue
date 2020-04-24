@@ -1,6 +1,6 @@
 <template>
 	<view>
-		
+		用户
 	</view>
 </template>
 

@@ -1,6 +1,6 @@
 <template>
 	<view>
-		
+		排行
 	</view>
 </template>
 
