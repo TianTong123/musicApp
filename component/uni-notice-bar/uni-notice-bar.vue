@@ -295,7 +295,7 @@
 	/* #ifndef APP-NVUE */
 	.uni-noticebar__content-wrapper--scrollable {
 		position: relative;
-		height: 100rpx;
+		height: 50rpx;
 	}
 
 	/* #endif */
@@ -349,7 +349,7 @@
 		/* #ifndef APP-NVUE */
 		position: absolute;
 		display: block;
-		height: 70rpx;
+		height: 50rpx;
 		white-space: nowrap;
 		padding-left: 100%;
 		animation: notice 10s 0s linear infinite both;

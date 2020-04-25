@@ -49,10 +49,11 @@
 					<user></user>
 				</swiper-item>
 			</swiper>
-		</view>
+		</view>	
 		
 		<!-- 播放条 -->
-		<player-control></player-control>
+		<player-control @showPlay="showPlay"></player-control>
+		
 	</view>
 </template>
 
@@ -63,6 +64,7 @@ import home from '../home/home.vue';
 import rank from '../rank/rank.vue';
 import singer from '../singer/singer.vue';
 import user from '../user/user.vue';
+
 // 缓存每页最多
 const MAX_CACHE_DATA = 100;
 // 缓存页签数量
@@ -73,57 +75,63 @@ export default {
   },
   data() {
     return {
-	  scrollInto: "",
-	  tabIndex: 0,
-	  scrollInto: "",
-	  pageList: [],
-	  iStatusBarHeight:0,//通知栏高度
-	  tabBars: [{
-	    name: '首页',
-	    id: 'home'
-	  }, {
-		  name: '歌手',
-		  id: 'singer'
-	  }, {
-		  name: '排行',
-		  id: 'rank'
-	  }, {
-		  name: '用户',
-		  id: 'user'
-	  }],
-	  showLeft: false
-	}
+			scrollInto: "",
+			tabIndex: 0,
+			scrollInto: "",
+			pageList: [],
+			iStatusBarHeight:0,//通知栏高度
+			tabBars: [{
+				name: '首页',
+				id: 'home'
+			}, {
+				name: '歌手',
+				id: 'singer'
+			}, {
+				name: '排行',
+				id: 'rank'
+			}, {
+				name: '用户',
+				id: 'user'
+			}],
+			showLeft: false,
+			isShowPlay: false
+		}
   },
   onLoad() {
 		this.iStatusBarHeight = uni.getSystemInfoSync().statusBarHeight
   },
   methods: {
-	//tab点击
-	ontabtap(e) {
-	  let index = e.target.dataset.current || e.currentTarget.dataset.current;
-	  this.switchTab(index);
-	},
-	//滑动页面时
-	onSwiperChange(val){
-	  let index = val.target.current || val.detail.current;
-	  this.switchTab(index);
-	  console.log(index)
-	},
-	//切换tab
-	switchTab(index) {
-	  if (this.tabIndex === index) {
-	     return;
-	  }
+		//tab点击
+		ontabtap(e) {
+			let index = e.target.dataset.current || e.currentTarget.dataset.current;
+			this.switchTab(index);
+		},
+		//滑动页面时
+		onSwiperChange(val){
+			let index = val.target.current || val.detail.current;
+			this.switchTab(index);
+			console.log(index)
+		},
+		//切换tab
+		switchTab(index) {
+			if (this.tabIndex === index) {
+				 return;
+			}
 
-	  this.tabIndex = index;
-	  this.scrollInto = this.tabBars[index].id;
-	},
-	//页面跳转
-	// goTabPage(pageName){
-	// 	uni.navigateTo({
-	// 	    url: `/pages/${pageName}/${pageName}`
-	// 	})
-	// }
+			this.tabIndex = index;
+			this.scrollInto = this.tabBars[index].id;
+		},
+		
+		//显示播放页
+		showPlay(val){
+			this.isShowPlay = true
+		},
+		//页面跳转
+		// goTabPage(pageName){
+		// 	uni.navigateTo({
+		// 	    url: `/pages/${pageName}/${pageName}`
+		// 	})
+		// }
 	}
 }
 </script>

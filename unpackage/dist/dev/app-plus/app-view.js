@@ -350,7 +350,14 @@ var render = function() {
         ],
         1
       ),
-      _c("player-control", { attrs: { _i: 18 } })
+      _c("player-control", {
+        attrs: { _i: 18 },
+        on: {
+          showPlay: function($event) {
+            return _vm.$handleViewEvent($event)
+          }
+        }
+      })
     ],
     1
   )
@@ -1981,18 +1988,23 @@ if(false) {}
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../Software/HBuilderX/plugins/uniapp-cli/node_modules/css-loader/dist/runtime/api.js */ 15);
 var ___CSS_LOADER_GET_URL_IMPORT___ = __webpack_require__(/*! ../../Software/HBuilderX/plugins/uniapp-cli/node_modules/css-loader/dist/runtime/getUrl.js */ 56);
 var ___CSS_LOADER_URL_IMPORT_0___ = __webpack_require__(/*! ./static/images/icon/play.png */ 57);
-var ___CSS_LOADER_URL_IMPORT_1___ = __webpack_require__(/*! ./static/images/icon/isLike.png */ 58);
-var ___CSS_LOADER_URL_IMPORT_2___ = __webpack_require__(/*! ./static/images/icon/like.png */ 59);
-var ___CSS_LOADER_URL_IMPORT_3___ = __webpack_require__(/*! ./static/images/icon/collect.png */ 60);
-var ___CSS_LOADER_URL_IMPORT_4___ = __webpack_require__(/*! ./static/images/icon/add.png */ 61);
-var ___CSS_LOADER_URL_IMPORT_5___ = __webpack_require__(/*! ./static/images/icon/pause.png */ 62);
-var ___CSS_LOADER_URL_IMPORT_6___ = __webpack_require__(/*! ./static/images/icon/extend.png */ 63);
-var ___CSS_LOADER_URL_IMPORT_7___ = __webpack_require__(/*! ./static/images/icon/arrow-left.png */ 85);
-var ___CSS_LOADER_URL_IMPORT_8___ = __webpack_require__(/*! ./static/images/icon/menu.png */ 64);
-var ___CSS_LOADER_URL_IMPORT_9___ = __webpack_require__(/*! ./static/images/icon/clear.png */ 65);
-var ___CSS_LOADER_URL_IMPORT_10___ = __webpack_require__(/*! ./static/images/icon/lock.png */ 66);
-var ___CSS_LOADER_URL_IMPORT_11___ = __webpack_require__(/*! ./static/images/icon/unLock.png */ 67);
-var ___CSS_LOADER_URL_IMPORT_12___ = __webpack_require__(/*! ./static/images/icon/loading.png */ 68);
+var ___CSS_LOADER_URL_IMPORT_1___ = __webpack_require__(/*! ./static/images/icon/play1.png */ 87);
+var ___CSS_LOADER_URL_IMPORT_2___ = __webpack_require__(/*! ./static/images/icon/play_prv.png */ 86);
+var ___CSS_LOADER_URL_IMPORT_3___ = __webpack_require__(/*! ./static/images/icon/play_next.png */ 88);
+var ___CSS_LOADER_URL_IMPORT_4___ = __webpack_require__(/*! ./static/images/icon/isLike.png */ 58);
+var ___CSS_LOADER_URL_IMPORT_5___ = __webpack_require__(/*! ./static/images/icon/like.png */ 59);
+var ___CSS_LOADER_URL_IMPORT_6___ = __webpack_require__(/*! ./static/images/icon/collect.png */ 60);
+var ___CSS_LOADER_URL_IMPORT_7___ = __webpack_require__(/*! ./static/images/icon/add.png */ 61);
+var ___CSS_LOADER_URL_IMPORT_8___ = __webpack_require__(/*! ./static/images/icon/pause.png */ 62);
+var ___CSS_LOADER_URL_IMPORT_9___ = __webpack_require__(/*! ./static/images/icon/pause1.png */ 89);
+var ___CSS_LOADER_URL_IMPORT_10___ = __webpack_require__(/*! ./static/images/icon/extend.png */ 63);
+var ___CSS_LOADER_URL_IMPORT_11___ = __webpack_require__(/*! ./static/images/icon/arrow-left.png */ 85);
+var ___CSS_LOADER_URL_IMPORT_12___ = __webpack_require__(/*! ./static/images/icon/menu.png */ 64);
+var ___CSS_LOADER_URL_IMPORT_13___ = __webpack_require__(/*! ./static/images/icon/clear.png */ 65);
+var ___CSS_LOADER_URL_IMPORT_14___ = __webpack_require__(/*! ./static/images/icon/lock.png */ 66);
+var ___CSS_LOADER_URL_IMPORT_15___ = __webpack_require__(/*! ./static/images/icon/unLock.png */ 67);
+var ___CSS_LOADER_URL_IMPORT_16___ = __webpack_require__(/*! ./static/images/icon/loading.png */ 68);
+var ___CSS_LOADER_URL_IMPORT_17___ = __webpack_require__(/*! ./static/images/icon/loading1.png */ 90);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 var ___CSS_LOADER_URL_REPLACEMENT_0___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_0___);
 var ___CSS_LOADER_URL_REPLACEMENT_1___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_1___);
@@ -2007,8 +2019,13 @@ var ___CSS_LOADER_URL_REPLACEMENT_9___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_
 var ___CSS_LOADER_URL_REPLACEMENT_10___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_10___);
 var ___CSS_LOADER_URL_REPLACEMENT_11___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_11___);
 var ___CSS_LOADER_URL_REPLACEMENT_12___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_12___);
+var ___CSS_LOADER_URL_REPLACEMENT_13___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_13___);
+var ___CSS_LOADER_URL_REPLACEMENT_14___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_14___);
+var ___CSS_LOADER_URL_REPLACEMENT_15___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_15___);
+var ___CSS_LOADER_URL_REPLACEMENT_16___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_16___);
+var ___CSS_LOADER_URL_REPLACEMENT_17___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_17___);
 // Module
-exports.push([module.i, ".my-normal-btn{\r\n\tdisplay: inline-block;\r\n\tvertical-align: top;\r\n\twidth: 40rpx;\r\n\theight: 40rpx;\n}\n.my-normal-btn i{\r\n\tdisplay: inline-block;\r\n\twidth: 40rpx;\r\n\theight: 40rpx;\n}\n.my-normal-btn i:active{\r\n\t-webkit-transform: translateX(5rpx) translateY(5rpx);\r\n\t        transform: translateX(5rpx) translateY(5rpx);\r\n\twidth: 35rpx;\r\n\theight: 35rpx;\n}\r\n/*\r\n * @Author: TianTong \r\n * @Date: 2019-12-05 10:48:52 \r\n * @Last Modified by: mikey.zhaopeng\r\n * @Last Modified time: 2020-04-01 11:21:32\r\n */\r\n/* 小型播放按钮 */\n.icon-mini-play{\r\n  width: auto;\r\n  height: auto;\r\n  display: inline-block;\r\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\r\n  background-size: 100%;\r\n  background-repeat: no-repeat;\n}\n.icon-next:hover{\r\n  background-position-x: -180px;\n}\r\n/* 点赞 */\n.icon-islike{\r\n  width: auto;\r\n  height: auto;\r\n  display: inline-block;\r\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_1___ + ");\r\n  background-size: 100%;\r\n  background-repeat: no-repeat;\n}\r\n/* 喜欢 */\n.icon-like{\r\n  width: auto;\r\n  height: auto;\r\n  display: inline-block;\r\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_2___ + ");\r\n  background-size: 100%;\r\n  background-repeat: no-repeat;\n}\r\n/* 收藏 */\n.icon-collect{\r\n  width: auto;\r\n  height: auto;\r\n  display: inline-block;\r\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_3___ + ");\r\n  background-size: 100%;\r\n  background-repeat: no-repeat;\n}\r\n/* 增加 */\n.icon-add{\r\n  width: auto;\r\n  height: auto;\r\n  display: inline-block;\r\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_4___ + ");\r\n  background-size: 100%;\r\n  background-repeat: no-repeat;\n}\r\n/* 暂停 */\n.icon-mini-pause{\r\n  width: auto;\r\n  height: auto;\r\n  display: inline-block;\r\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_5___ + ");\r\n  background-size: 100%;\r\n  background-repeat: no-repeat;\n}\r\n/* 扩展 */\n.icon-mini-extend{\r\n  width: auto;\r\n  height: auto;\r\n  display: inline-block;\r\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_6___ + ");\r\n  background-size: 100%;\r\n  background-repeat: no-repeat;\n}\r\n/* 返回 */\n.icon-mini-return{\r\n  width: auto;\r\n  height: auto;\r\n  display: inline-block;\r\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_7___ + ");\r\n  background-size: 100%;\r\n  background-repeat: no-repeat;\n}\r\n/* 菜单 */\n.icon-mini-menu{\r\n  width: auto;\r\n  height: auto;\r\n  display: inline-block;\r\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_8___ + ");\r\n  background-size: 100%;\r\n  background-repeat: no-repeat;\n}\r\n/* 垃圾桶 */\n.icon-mini-clear{\r\n  width: auto;\r\n  height: auto;\r\n  display: inline-block;\r\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_9___ + ");\r\n  background-size: 100%;\r\n  background-repeat: no-repeat;\n}\r\n/* 锁 */\n.icon-mini-lock{\r\n  width: auto;\r\n  height: auto;\r\n  display: inline-block;\r\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_10___ + ");\r\n  background-size: 100%;\r\n  background-repeat: no-repeat;\n}\r\n/* 解锁 */\n.icon-mini-unlock{\r\n  width: auto;\r\n  height: auto;\r\n  display: inline-block;\r\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_11___ + ");\r\n  background-size: 100%;\r\n  background-repeat: no-repeat;\n}\r\n/* 加载 */\n.icon-mini-loading{\r\n  width: auto;\r\n  height: auto;\r\n  display: inline-block;\r\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_12___ + ");\r\n  background-size: 100%;\r\n  background-repeat: no-repeat;\r\n  -webkit-animation: loading 1s linear infinite;\r\n          animation: loading 1s linear infinite;\n}\n@-webkit-keyframes loading{\n0%{\r\n    -webkit-transform: rotateZ(0deg);\r\n            transform: rotateZ(0deg);\n}\n100%{\r\n    -webkit-transform: rotateZ(360deg);\r\n            transform: rotateZ(360deg);\n}\n}\n@keyframes loading{\n0%{\r\n    -webkit-transform: rotateZ(0deg);\r\n            transform: rotateZ(0deg);\n}\n100%{\r\n    -webkit-transform: rotateZ(360deg);\r\n            transform: rotateZ(360deg);\n}\n}\r\n/*每个页面公共css */\r\n\r\n", ""]);
+exports.push([module.i, "/* 普通按钮 */\n.my-normal-btn{\r\n\tdisplay: inline-block;\r\n\tvertical-align: top;\r\n\twidth: 40rpx;\r\n\theight: 40rpx;\n}\n.my-normal-btn i{\r\n\tdisplay: inline-block;\r\n\twidth: 40rpx;\r\n\theight: 40rpx;\n}\n.my-normal-btn i:active{\r\n\t-webkit-transform: translateX(5rpx) translateY(5rpx);\r\n\t        transform: translateX(5rpx) translateY(5rpx);\r\n\twidth: 35rpx;\r\n\theight: 35rpx;\n}\r\n/*\r\n * @Author: TianTong \r\n * @Date: 2019-12-05 10:48:52 \r\n * @Last Modified by: mikey.zhaopeng\r\n * @Last Modified time: 2020-04-01 11:21:32\r\n */\r\n/* 小型播放按钮 */\n.icon-mini-play{\r\n  width: auto;\r\n  height: auto;\r\n  display: inline-block;\r\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\r\n  background-size: 100%;\r\n  background-repeat: no-repeat;\n}\r\n/* 大型播放按钮 */\n.icon-play{\r\n  width: auto;\r\n  height: auto;\r\n  display: inline-block;\r\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_1___ + ");\r\n  background-size: 100%;\r\n  background-repeat: no-repeat;\n}\r\n/* 上一首 */\n.icon-playPrv{\r\n  width: auto;\r\n  height: auto;\r\n  display: inline-block;\r\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_2___ + ");\r\n  background-size: 100%;\r\n  background-repeat: no-repeat;\n}\r\n/* 下一首 */\n.icon-playNext{\r\n  width: auto;\r\n  height: auto;\r\n  display: inline-block;\r\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_3___ + ");\r\n  background-size: 100%;\r\n  background-repeat: no-repeat;\n}\r\n/* 点赞 */\n.icon-islike{\r\n  width: auto;\r\n  height: auto;\r\n  display: inline-block;\r\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_4___ + ");\r\n  background-size: 100%;\r\n  background-repeat: no-repeat;\n}\r\n/* 喜欢 */\n.icon-like{\r\n  width: auto;\r\n  height: auto;\r\n  display: inline-block;\r\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_5___ + ");\r\n  background-size: 100%;\r\n  background-repeat: no-repeat;\n}\r\n/* 收藏 */\n.icon-collect{\r\n  width: auto;\r\n  height: auto;\r\n  display: inline-block;\r\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_6___ + ");\r\n  background-size: 100%;\r\n  background-repeat: no-repeat;\n}\r\n/* 增加 */\n.icon-add{\r\n  width: auto;\r\n  height: auto;\r\n  display: inline-block;\r\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_7___ + ");\r\n  background-size: 100%;\r\n  background-repeat: no-repeat;\n}\r\n/* 暂停 */\n.icon-mini-pause{\r\n  width: auto;\r\n  height: auto;\r\n  display: inline-block;\r\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_8___ + ");\r\n  background-size: 100%;\r\n  background-repeat: no-repeat;\n}\r\n/* 大型暂停按钮 */\n.icon-pause{\r\n  width: auto;\r\n  height: auto;\r\n  display: inline-block;\r\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_9___ + ");\r\n  background-size: 100%;\r\n  background-repeat: no-repeat;\n}\r\n/* 扩展 */\n.icon-mini-extend{\r\n  width: auto;\r\n  height: auto;\r\n  display: inline-block;\r\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_10___ + ");\r\n  background-size: 100%;\r\n  background-repeat: no-repeat;\n}\r\n/* 返回 */\n.icon-mini-return{\r\n  width: auto;\r\n  height: auto;\r\n  display: inline-block;\r\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_11___ + ");\r\n  background-size: 100%;\r\n  background-repeat: no-repeat;\n}\r\n/* 菜单 */\n.icon-mini-menu{\r\n  width: auto;\r\n  height: auto;\r\n  display: inline-block;\r\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_12___ + ");\r\n  background-size: 100%;\r\n  background-repeat: no-repeat;\n}\r\n/* 垃圾桶 */\n.icon-mini-clear{\r\n  width: auto;\r\n  height: auto;\r\n  display: inline-block;\r\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_13___ + ");\r\n  background-size: 100%;\r\n  background-repeat: no-repeat;\n}\r\n/* 锁 */\n.icon-mini-lock{\r\n  width: auto;\r\n  height: auto;\r\n  display: inline-block;\r\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_14___ + ");\r\n  background-size: 100%;\r\n  background-repeat: no-repeat;\n}\r\n/* 解锁 */\n.icon-mini-unlock{\r\n  width: auto;\r\n  height: auto;\r\n  display: inline-block;\r\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_15___ + ");\r\n  background-size: 100%;\r\n  background-repeat: no-repeat;\n}\r\n/* 加载 */\n.icon-mini-loading{\r\n  width: auto;\r\n  height: auto;\r\n  display: inline-block;\r\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_16___ + ");\r\n  background-size: 100%;\r\n  background-repeat: no-repeat;\r\n  -webkit-animation: loading 1s linear infinite;\r\n          animation: loading 1s linear infinite;\n}\n.icon-loading{\r\n  width: auto;\r\n  height: auto;\r\n  display: inline-block;\r\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_17___ + ");\r\n  background-size: 100%;\r\n  background-repeat: no-repeat;\r\n  -webkit-animation: loading 1s linear infinite;\r\n          animation: loading 1s linear infinite;\n}\n@-webkit-keyframes loading{\n0%{\r\n    -webkit-transform: rotateZ(0deg);\r\n            transform: rotateZ(0deg);\n}\n100%{\r\n    -webkit-transform: rotateZ(360deg);\r\n            transform: rotateZ(360deg);\n}\n}\n@keyframes loading{\n0%{\r\n    -webkit-transform: rotateZ(0deg);\r\n            transform: rotateZ(0deg);\n}\n100%{\r\n    -webkit-transform: rotateZ(360deg);\r\n            transform: rotateZ(360deg);\n}\n}\r\n/*每个页面公共css */\r\n\r\n", ""]);
 // Exports
 module.exports = exports;
 
@@ -2652,11 +2669,7 @@ var render = function() {
         [
           _c("v-uni-image", {
             staticClass: _vm._$g(2, "sc"),
-            attrs: {
-              src:
-                "http://39.107.123.212:8848/tiantong/file/imgShow/b40c30d384454c53a5b45a5ebfecca91.jpg",
-              _i: 2
-            }
+            attrs: { src: _vm._$g(2, "a-src"), _i: 2 }
           })
         ],
         1
@@ -2683,7 +2696,261 @@ var render = function() {
             [_c("i", { staticClass: _vm._$g(5, "sc"), attrs: { _i: 5 } })],
             1
           ),
-          _c("uni-notice-bar", { attrs: { _i: 6 } })
+          _c("uni-notice-bar", {
+            staticStyle: { position: "absolute", top: "0", left: "120rpx" },
+            attrs: { _i: 6 }
+          }),
+          _c(
+            "v-uni-text",
+            { staticClass: _vm._$g(7, "sc"), attrs: { _i: 7 } },
+            [_vm._v(_vm._$g(7, "t0-0"))]
+          )
+        ],
+        1
+      ),
+      _c(
+        "v-uni-view",
+        {
+          directives: [
+            {
+              name: "show",
+              rawName: "v-show",
+              value: _vm._$g(8, "v-show"),
+              expression: "_$g(8,'v-show')"
+            }
+          ],
+          staticClass: _vm._$g(8, "sc"),
+          style: _vm._$g(8, "s"),
+          attrs: { _i: 8 }
+        },
+        [
+          _c(
+            "v-uni-view",
+            { staticClass: _vm._$g(9, "sc"), attrs: { _i: 9 } },
+            [
+              _c("v-uni-image", {
+                staticClass: _vm._$g(10, "sc"),
+                attrs: { src: _vm._$g(10, "a-src"), _i: 10 }
+              })
+            ],
+            1
+          ),
+          _c(
+            "v-uni-view",
+            { staticClass: _vm._$g(11, "sc"), attrs: { _i: 11 } },
+            [
+              _c(
+                "v-uni-view",
+                { staticClass: _vm._$g(12, "sc"), attrs: { _i: 12 } },
+                [
+                  _c("i", { staticClass: _vm._$g(13, "sc"), attrs: { _i: 13 } })
+                ],
+                1
+              ),
+              _c(
+                "v-uni-view",
+                { staticClass: _vm._$g(14, "sc"), attrs: { _i: 14 } },
+                [
+                  _c("i", { staticClass: _vm._$g(15, "sc"), attrs: { _i: 15 } })
+                ],
+                1
+              ),
+              _c(
+                "v-uni-view",
+                { staticClass: _vm._$g(16, "sc"), attrs: { _i: 16 } },
+                [
+                  _c("i", { staticClass: _vm._$g(17, "sc"), attrs: { _i: 17 } })
+                ],
+                1
+              ),
+              _c(
+                "v-uni-view",
+                { staticClass: _vm._$g(18, "sc"), attrs: { _i: 18 } },
+                [
+                  _c("i", { staticClass: _vm._$g(19, "sc"), attrs: { _i: 19 } })
+                ],
+                1
+              )
+            ],
+            1
+          )
+        ],
+        1
+      ),
+      _c(
+        "v-uni-view",
+        {
+          staticClass: _vm._$g(20, "sc"),
+          style: _vm._$g(20, "s"),
+          attrs: { _i: 20 }
+        },
+        [
+          _c(
+            "v-uni-view",
+            {
+              staticClass: _vm._$g(21, "sc"),
+              style: _vm._$g(21, "s"),
+              attrs: { _i: 21 }
+            },
+            [
+              _c(
+                "v-uni-text",
+                {
+                  directives: [
+                    {
+                      name: "show",
+                      rawName: "v-show",
+                      value: _vm._$g(22, "v-show"),
+                      expression: "_$g(22,'v-show')"
+                    }
+                  ],
+                  attrs: { _i: 22 }
+                },
+                [_vm._v("纯音乐")]
+              ),
+              _vm._l(_vm._$g(23, "f"), function(e, index, $20, $30) {
+                return _c("v-uni-text", {
+                  key: e,
+                  class: _vm._$g("23-" + $30, "c"),
+                  attrs: { _i: "23-" + $30 },
+                  domProps: {
+                    innerHTML: _vm._s(_vm._$g("23-" + $30, "v-html"))
+                  }
+                })
+              })
+            ],
+            2
+          )
+        ],
+        1
+      ),
+      _c(
+        "v-uni-view",
+        { staticClass: _vm._$g(24, "sc"), attrs: { _i: 24 } },
+        [
+          _c(
+            "v-uni-view",
+            { staticClass: _vm._$g(25, "sc"), attrs: { _i: 25 } },
+            [
+              _c(
+                "v-uni-text",
+                {
+                  staticClass: _vm._$g(26, "sc"),
+                  staticStyle: { left: "30rpx" },
+                  attrs: { _i: 26 }
+                },
+                [_vm._v(_vm._$g(26, "t0-0"))]
+              ),
+              _c(
+                "v-uni-view",
+                { staticClass: _vm._$g(27, "sc"), attrs: { _i: 27 } },
+                [
+                  _c(
+                    "v-uni-view",
+                    {
+                      staticClass: _vm._$g(28, "sc"),
+                      style: _vm._$g(28, "s"),
+                      attrs: { _i: 28 }
+                    },
+                    [
+                      _c("v-uni-view", {
+                        staticClass: _vm._$g(29, "sc"),
+                        attrs: { _i: 29 }
+                      })
+                    ],
+                    1
+                  )
+                ],
+                1
+              ),
+              _c(
+                "v-uni-text",
+                {
+                  staticClass: _vm._$g(30, "sc"),
+                  staticStyle: { right: "30rpx" },
+                  attrs: { _i: 30 }
+                },
+                [_vm._v(_vm._$g(30, "t0-0"))]
+              )
+            ],
+            1
+          ),
+          _c(
+            "v-uni-view",
+            { staticClass: _vm._$g(31, "sc"), attrs: { _i: 31 } },
+            [
+              _c(
+                "v-uni-view",
+                { staticClass: _vm._$g(32, "sc"), attrs: { _i: 32 } },
+                [
+                  _c("i", { staticClass: _vm._$g(33, "sc"), attrs: { _i: 33 } })
+                ],
+                1
+              ),
+              _c(
+                "v-uni-view",
+                { staticClass: _vm._$g(34, "sc"), attrs: { _i: 34 } },
+                [
+                  _c("i", {
+                    directives: [
+                      {
+                        name: "show",
+                        rawName: "v-show",
+                        value: _vm._$g(35, "v-show"),
+                        expression: "_$g(35,'v-show')"
+                      }
+                    ],
+                    staticClass: _vm._$g(35, "sc"),
+                    attrs: { _i: 35 },
+                    on: {
+                      click: function($event) {
+                        return _vm.$handleViewEvent($event)
+                      }
+                    }
+                  }),
+                  _c("i", {
+                    directives: [
+                      {
+                        name: "show",
+                        rawName: "v-show",
+                        value: _vm._$g(36, "v-show"),
+                        expression: "_$g(36,'v-show')"
+                      }
+                    ],
+                    staticClass: _vm._$g(36, "sc"),
+                    attrs: { _i: 36 },
+                    on: {
+                      click: function($event) {
+                        return _vm.$handleViewEvent($event)
+                      }
+                    }
+                  }),
+                  _c("i", {
+                    directives: [
+                      {
+                        name: "show",
+                        rawName: "v-show",
+                        value: _vm._$g(37, "v-show"),
+                        expression: "_$g(37,'v-show')"
+                      }
+                    ],
+                    staticClass: _vm._$g(37, "sc"),
+                    attrs: { _i: 37 }
+                  })
+                ],
+                1
+              ),
+              _c(
+                "v-uni-view",
+                { staticClass: _vm._$g(38, "sc"), attrs: { _i: 38 } },
+                [
+                  _c("i", { staticClass: _vm._$g(39, "sc"), attrs: { _i: 39 } })
+                ],
+                1
+              )
+            ],
+            1
+          )
         ],
         1
       )
@@ -2954,7 +3221,7 @@ if(false) {}
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../../Software/HBuilderX/plugins/uniapp-cli/node_modules/css-loader/dist/runtime/api.js */ 15);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, "\n.uni-noticebar[data-v-aa4e3ffa] {\n\t\n\tdisplay: -webkit-box;\n\tdisplay: -webkit-flex;\n\tdisplay: flex;\n\twidth: 600rpx;\n\tbox-sizing: border-box;\n\t\n\t-webkit-box-orient: horizontal;\n\t-webkit-box-direction: normal;\n\t-webkit-flex-direction: row;\n\t        flex-direction: row;\n\t-webkit-box-align: center;\n\t-webkit-align-items: center;\n\t        align-items: center;\n}\n.uni-noticebar-close[data-v-aa4e3ffa] {\n\tmargin-right: 5px;\n}\n.uni-noticebar-icon[data-v-aa4e3ffa] {\n\tmargin-right: 5px;\n}\n.uni-noticebar__content-wrapper[data-v-aa4e3ffa] {\n\t-webkit-box-flex: 1;\n\t-webkit-flex: 1;\n\t        flex: 1;\n\t-webkit-box-orient: vertical;\n\t-webkit-box-direction: normal;\n\t-webkit-flex-direction: column;\n\t        flex-direction: column;\n\toverflow: hidden;\n}\n.uni-noticebar__content-wrapper--single[data-v-aa4e3ffa] {\n\t\n\tline-height: 18px;\n\t\n}\n.uni-noticebar__content-wrapper--single[data-v-aa4e3ffa],\n.uni-noticebar__content-wrapper--scrollable[data-v-aa4e3ffa] {\n\t-webkit-box-orient: horizontal;\n\t-webkit-box-direction: normal;\n\t-webkit-flex-direction: row;\n\t        flex-direction: row;\n}\n\n\n.uni-noticebar__content-wrapper--scrollable[data-v-aa4e3ffa] {\n\tposition: relative;\n\theight: 100rpx;\n}\n\n\n.uni-noticebar__content--scrollable[data-v-aa4e3ffa] {\n\t\n\t\n\t-webkit-box-flex: 1;\n\t-webkit-flex: 1;\n\t        flex: 1;\n\tdisplay: block;\n\toverflow: hidden;\n\t\n}\n.uni-noticebar__content--single[data-v-aa4e3ffa] {\n\t\n\tdisplay: -webkit-box;\n\tdisplay: -webkit-flex;\n\tdisplay: flex;\n\t-webkit-box-flex: 0;\n\t-webkit-flex: none;\n\t        flex: none;\n\twidth: 100%;\n\t-webkit-box-pack: center;\n\t-webkit-justify-content: center;\n\t        justify-content: center;\n\t\n}\n.uni-noticebar__content-text[data-v-aa4e3ffa] {\n\tfont-size: 40rpx !important;\n\tline-height: 70rpx;\n\t\n\tword-break: break-all;\n\t\n}\n.uni-noticebar__content-text--single[data-v-aa4e3ffa] {\n\t\n\t\n\tdisplay: block;\n\twidth: 100%;\n\twhite-space: nowrap;\n\t\n\toverflow: hidden;\n\ttext-overflow: ellipsis;\n}\n.uni-noticebar__content-text--scrollable[data-v-aa4e3ffa] {\n\t\n\t\n\tposition: absolute;\n\tdisplay: block;\n\theight: 70rpx;\n\twhite-space: nowrap;\n\tpadding-left: 100%;\n\t-webkit-animation: notice-data-v-aa4e3ffa 10s 0s linear infinite both;\n\t        animation: notice-data-v-aa4e3ffa 10s 0s linear infinite both;\n\t-webkit-animation-play-state: paused;\n\t        animation-play-state: paused;\n\t\n}\n.uni-noticebar__more[data-v-aa4e3ffa] {\n\t\n\tdisplay: -webkit-inline-box;\n\tdisplay: -webkit-inline-flex;\n\tdisplay: inline-flex;\n\t\n\t-webkit-box-orient: horizontal;\n\t-webkit-box-direction: normal;\n\t-webkit-flex-direction: row;\n\t        flex-direction: row;\n\t-webkit-flex-wrap: nowrap;\n\t        flex-wrap: nowrap;\n\t-webkit-box-align: center;\n\t-webkit-align-items: center;\n\t        align-items: center;\n\tpadding-left: 5px;\n}\n.uni-noticebar__more-text[data-v-aa4e3ffa] {\n\tfont-size: 35px;\n}\n@-webkit-keyframes notice-data-v-aa4e3ffa {\n100% {\n\t\t-webkit-transform: translate3d(-100%, 0, 0);\n\t\t        transform: translate3d(-100%, 0, 0);\n}\n}\n@keyframes notice-data-v-aa4e3ffa {\n100% {\n\t\t-webkit-transform: translate3d(-100%, 0, 0);\n\t\t        transform: translate3d(-100%, 0, 0);\n}\n}\n", ""]);
+exports.push([module.i, "\n.uni-noticebar[data-v-aa4e3ffa] {\n\t\n\tdisplay: -webkit-box;\n\tdisplay: -webkit-flex;\n\tdisplay: flex;\n\twidth: 600rpx;\n\tbox-sizing: border-box;\n\t\n\t-webkit-box-orient: horizontal;\n\t-webkit-box-direction: normal;\n\t-webkit-flex-direction: row;\n\t        flex-direction: row;\n\t-webkit-box-align: center;\n\t-webkit-align-items: center;\n\t        align-items: center;\n}\n.uni-noticebar-close[data-v-aa4e3ffa] {\n\tmargin-right: 5px;\n}\n.uni-noticebar-icon[data-v-aa4e3ffa] {\n\tmargin-right: 5px;\n}\n.uni-noticebar__content-wrapper[data-v-aa4e3ffa] {\n\t-webkit-box-flex: 1;\n\t-webkit-flex: 1;\n\t        flex: 1;\n\t-webkit-box-orient: vertical;\n\t-webkit-box-direction: normal;\n\t-webkit-flex-direction: column;\n\t        flex-direction: column;\n\toverflow: hidden;\n}\n.uni-noticebar__content-wrapper--single[data-v-aa4e3ffa] {\n\t\n\tline-height: 18px;\n\t\n}\n.uni-noticebar__content-wrapper--single[data-v-aa4e3ffa],\n.uni-noticebar__content-wrapper--scrollable[data-v-aa4e3ffa] {\n\t-webkit-box-orient: horizontal;\n\t-webkit-box-direction: normal;\n\t-webkit-flex-direction: row;\n\t        flex-direction: row;\n}\n\n\n.uni-noticebar__content-wrapper--scrollable[data-v-aa4e3ffa] {\n\tposition: relative;\n\theight: 50rpx;\n}\n\n\n.uni-noticebar__content--scrollable[data-v-aa4e3ffa] {\n\t\n\t\n\t-webkit-box-flex: 1;\n\t-webkit-flex: 1;\n\t        flex: 1;\n\tdisplay: block;\n\toverflow: hidden;\n\t\n}\n.uni-noticebar__content--single[data-v-aa4e3ffa] {\n\t\n\tdisplay: -webkit-box;\n\tdisplay: -webkit-flex;\n\tdisplay: flex;\n\t-webkit-box-flex: 0;\n\t-webkit-flex: none;\n\t        flex: none;\n\twidth: 100%;\n\t-webkit-box-pack: center;\n\t-webkit-justify-content: center;\n\t        justify-content: center;\n\t\n}\n.uni-noticebar__content-text[data-v-aa4e3ffa] {\n\tfont-size: 40rpx !important;\n\tline-height: 70rpx;\n\t\n\tword-break: break-all;\n\t\n}\n.uni-noticebar__content-text--single[data-v-aa4e3ffa] {\n\t\n\t\n\tdisplay: block;\n\twidth: 100%;\n\twhite-space: nowrap;\n\t\n\toverflow: hidden;\n\ttext-overflow: ellipsis;\n}\n.uni-noticebar__content-text--scrollable[data-v-aa4e3ffa] {\n\t\n\t\n\tposition: absolute;\n\tdisplay: block;\n\theight: 50rpx;\n\twhite-space: nowrap;\n\tpadding-left: 100%;\n\t-webkit-animation: notice-data-v-aa4e3ffa 10s 0s linear infinite both;\n\t        animation: notice-data-v-aa4e3ffa 10s 0s linear infinite both;\n\t-webkit-animation-play-state: paused;\n\t        animation-play-state: paused;\n\t\n}\n.uni-noticebar__more[data-v-aa4e3ffa] {\n\t\n\tdisplay: -webkit-inline-box;\n\tdisplay: -webkit-inline-flex;\n\tdisplay: inline-flex;\n\t\n\t-webkit-box-orient: horizontal;\n\t-webkit-box-direction: normal;\n\t-webkit-flex-direction: row;\n\t        flex-direction: row;\n\t-webkit-flex-wrap: nowrap;\n\t        flex-wrap: nowrap;\n\t-webkit-box-align: center;\n\t-webkit-align-items: center;\n\t        align-items: center;\n\tpadding-left: 5px;\n}\n.uni-noticebar__more-text[data-v-aa4e3ffa] {\n\tfont-size: 35px;\n}\n@-webkit-keyframes notice-data-v-aa4e3ffa {\n100% {\n\t\t-webkit-transform: translate3d(-100%, 0, 0);\n\t\t        transform: translate3d(-100%, 0, 0);\n}\n}\n@keyframes notice-data-v-aa4e3ffa {\n100% {\n\t\t-webkit-transform: translate3d(-100%, 0, 0);\n\t\t        transform: translate3d(-100%, 0, 0);\n}\n}\n", ""]);
 // Exports
 module.exports = exports;
 
@@ -3006,7 +3273,7 @@ if(false) {}
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../../Software/HBuilderX/plugins/uniapp-cli/node_modules/css-loader/dist/runtime/api.js */ 15);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, "\n.play{\r\n\tposition: relative;\r\n\twidth: 750rpx;\r\n\theight: 100vh;\n}\n.play .play-bg{\r\n\tposition: absolute;\r\n\ttop: 0;\r\n\tleft: 0;\r\n\twidth: 750rpx;\r\n\theight: 100vh;\r\n\toverflow: hidden;\n}\n.play .play-bg .bg-img{\r\n\tposition: absolute;\r\n\ttop: 50%;\r\n\tleft: 50%;\r\n\t-webkit-transform: translateX(-50%) translateY(-50%);\r\n\t        transform: translateX(-50%) translateY(-50%);\r\n\twidth: 800rpx;\r\n\theight: 120vh;\r\n\t-webkit-filter: blur(100px);\r\n\t        filter: blur(100px);\n}\n.play .play-head{\r\n\tposition: absolute;\r\n\tdisplay: -webkit-box;\r\n\tdisplay: -webkit-flex;\r\n\tdisplay: flex;\r\n\t-webkit-flex-wrap: nowrap;\r\n\t        flex-wrap: nowrap;\r\n\tz-index: 20;\r\n\ttop: 0;\r\n\tleft: 0;\r\n\theight: 100rpx;\r\n\twidth: 750rpx;\r\n\t-webkit-box-pack: ;\r\n\t-webkit-justify-content: ;\r\n\t        justify-content: ;\n}\n.play .title-btn{\r\n\tmargin: 25rpx 40rpx;\n}\n", ""]);
+exports.push([module.i, "\n.play{\r\n\tposition: relative;\r\n\twidth: 750rpx;\r\n\theight: 100vh;\n}\n.play .play-bg{\r\n\tposition: absolute;\r\n\ttop: 0;\r\n\tleft: 0;\r\n\twidth: 750rpx;\r\n\theight: 100vh;\r\n\toverflow: hidden;\n}\n.play .play-bg .bg-img{\r\n\tposition: absolute;\r\n\ttop: 50%;\r\n\tleft: 50%;\r\n\t-webkit-transform: translateX(-50%) translateY(-50%);\r\n\t        transform: translateX(-50%) translateY(-50%);\r\n\twidth: 800rpx;\r\n\theight: 120vh;\r\n\t-webkit-filter: blur(100px);\r\n\t        filter: blur(100px);\n}\n.play .play-head{\r\n\tposition: absolute;\r\n\tz-index: 20;\r\n\ttop: 0;\r\n\tleft: 0;\r\n\theight: 7.5vh;\r\n\twidth: 750rpx;\n}\n.play .title-btn{\r\n\tmargin: 2.25vh 3vh;\n}\n.play .singer{\r\n\tposition: absolute;\r\n\tdisplay: block;\r\n\tbottom: 0;\r\n\tleft: 120rpx;\r\n\theight: 4vh;\r\n\tline-height: 4vh;\r\n\tfont-size: 25rpx;\r\n\tcolor: #eee;\n}\n.play .play-poster{\r\n\tposition: absolute;\r\n\ttop: 7.5vh;\r\n\tbottom: 18.75vh;\r\n\twidth: 750rpx;\n}\n.play .play-poster .poster-wrap{\r\n\tposition: absolute;\r\n\ttop: 45%;\r\n\tleft: 50%;\r\n\tmargin-top: -225rpx;\r\n\tmargin-left: -225rpx;\r\n\theight: 450rpx;\r\n\twidth: 450rpx;\r\n\tborder: 10rpx solid rgba(238, 238, 238, .5);\r\n\tborder-radius: 225rpx;\r\n\toverflow: hidden;\r\n\t-webkit-animation: loading 26s linear infinite;\r\n\t        animation: loading 26s linear infinite;\n}\n.play .play-poster .poster-wrap .poster{\r\n\tposition: absolute;\r\n\ttop: 50%;\r\n\tleft: 50%;\r\n\t-webkit-transform: translateX(-50%) translateY(-50%);\r\n\t        transform: translateX(-50%) translateY(-50%);\r\n\theight: 100%;\n}\n.play .play-poster .btn-bar{\r\n\tposition: absolute;\r\n\tbottom: 0;\r\n\twidth: 750rpx;\r\n\theight: 7.5vh;\r\n\ttext-align: center;\n}\r\n/* 控制条 */\n.play .play-control-bar{\r\n\tposition: absolute;\r\n\tbottom: 0;\r\n\theight: 18.75vh;\r\n\twidth: 750rpx;\n}\n.play .play-control-bar .progress-bar{\r\n\tposition: absolute;\r\n\ttop: 0;\r\n\twidth: 750rpx;\r\n\theight: 6vh;\n}\n.play .progress-bar .progress-bg{\r\n\tmargin: 2.85vh auto;\r\n\twidth: 530rpx;\r\n\theight: 0.3vh;\r\n\tbackground-color: #fff;\r\n\tborder-radius: 0.15vh;\n}\n.play .progress-bar .progress-bg .progress-value{\r\n\tposition: relative;\r\n\theight: .3vh;\r\n\tborder-radius: 0.15vh;\r\n\tbackground-color: #c20c0c;\n}\n.play .progress-bar .progress-bg .progress-value .progress-icon{\r\n\tposition: absolute;\r\n\ttop: 50%;\r\n\tright: 0;\r\n\t-webkit-transform: translateY(-50%);\r\n\t        transform: translateY(-50%);\r\n\tmargin-right: -9rpx;\r\n\theight: 18rpx;\r\n\twidth: 18rpx;\r\n\tborder-radius: 9rpx;\r\n\tbackground-color: #C20C0C;\n}\n.play .progress-bar .p-time{\r\n\tposition: absolute;\r\n\ttop: 0;\r\n\twidth: ;\r\n\tfont-size: 20rpx;\r\n\tline-height: 6vh;\r\n\tcolor: #fff;\n}\r\n/* 下面按钮 */\n.play .play-btn-wrap{\r\n\tposition: absolute;\r\n\tdisplay: -webkit-box;\r\n\tdisplay: -webkit-flex;\r\n\tdisplay: flex;\r\n\ttop: 6vh;\r\n\twidth: 750rpx;\r\n\theight: 12.75vh;\r\n\t-webkit-box-pack: center;\r\n\t-webkit-justify-content: center;\r\n\t        justify-content: center;\n}\n.play .play-btn-wrap .play-btn{\r\n\tmargin: 0.75vh 100rpx;\r\n\theight: 100rpx;\r\n\twidth: 100rpx;\n}\n.play .play-btn-wrap .play-btn i{\r\n\tdisplay: inline-block;\r\n\twidth: 100rpx;\r\n\theight: 100rpx;\n}\n.play .play-btn-wrap .small-btn{\r\n\tmargin: 1.875vh 0;\r\n\theight: 70rpx;\r\n\twidth: 70rpx;\n}\n.play .play-btn-wrap .small-btn i{\r\n\tdisplay: inline-block;\r\n\twidth: 70rpx;\r\n\theight: 70rpx;\n}\r\n/* 歌词部分 */\n.play .lyric{\r\n\tposition: absolute;\r\n\ttop: 7.5vh;\r\n\tbottom: 25vh;\r\n\twidth: 750rpx;\r\n\toverflow-y: auto;\n}\n.play .lyric .lyric-wrap{\r\n\tposition: absolute;\r\n\ttop: 0;\r\n\twidth: 750rpx;\r\n\tpadding-bottom: 80vh;\r\n\t-webkit-transition-duration: .3s;\r\n\t        transition-duration: .3s;\n}\n.play .lyric .lyric-wrap .text{\r\n\tdisplay: block;\r\n\tmargin: 30rpx auto;\r\n\twidth: 600rpx;\r\n\tfont-size: 25rpx;\r\n\ttext-align: center;\r\n\tline-height: 30rpx;\r\n\twhite-space: nowrap;\r\n\tcolor: #fff;\n}\n.play .lyric .lyric-wrap .active-line{\r\n\tcolor: #01e5ff;\r\n\tfont-size: 30rpx;\n}\n@-webkit-keyframes loading{\n0%{\r\n    -webkit-transform: rotateZ(0deg);\r\n            transform: rotateZ(0deg);\n}\n100%{\r\n    -webkit-transform: rotateZ(360deg);\r\n            transform: rotateZ(360deg);\n}\n}\n@keyframes loading{\n0%{\r\n    -webkit-transform: rotateZ(0deg);\r\n            transform: rotateZ(0deg);\n}\n100%{\r\n    -webkit-transform: rotateZ(360deg);\r\n            transform: rotateZ(360deg);\n}\n}\n", ""]);
 // Exports
 module.exports = exports;
 
@@ -3020,6 +3287,56 @@ module.exports = exports;
 /***/ (function(module, exports) {
 
 module.exports = "static/images/icon/arrow-left.png";
+
+/***/ }),
+/* 86 */
+/*!*******************************************************************!*\
+  !*** E:/uniappWorkSpace/TinaTong/static/images/icon/play_prv.png ***!
+  \*******************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "static/images/icon/play_prv.png";
+
+/***/ }),
+/* 87 */
+/*!****************************************************************!*\
+  !*** E:/uniappWorkSpace/TinaTong/static/images/icon/play1.png ***!
+  \****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "static/images/icon/play1.png";
+
+/***/ }),
+/* 88 */
+/*!********************************************************************!*\
+  !*** E:/uniappWorkSpace/TinaTong/static/images/icon/play_next.png ***!
+  \********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "static/images/icon/play_next.png";
+
+/***/ }),
+/* 89 */
+/*!*****************************************************************!*\
+  !*** E:/uniappWorkSpace/TinaTong/static/images/icon/pause1.png ***!
+  \*****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "static/images/icon/pause1.png";
+
+/***/ }),
+/* 90 */
+/*!*******************************************************************!*\
+  !*** E:/uniappWorkSpace/TinaTong/static/images/icon/loading1.png ***!
+  \*******************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "static/images/icon/loading1.png";
 
 /***/ })
 /******/ ]);

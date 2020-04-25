@@ -1,3 +1,4 @@
+/* 普通按钮 */
 .my-normal-btn{
 	display: inline-block;
 	vertical-align: top;
@@ -14,3 +15,4 @@
 	width: 35rpx;
 	height: 35rpx;
 }
+

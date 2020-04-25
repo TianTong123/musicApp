@@ -14,10 +14,32 @@
   background-size: 100%;
   background-repeat: no-repeat;
 }
-
-
-.icon-next:hover{
-  background-position-x: -180px;
+/* 大型播放按钮 */
+.icon-play{
+  width: auto;
+  height: auto;
+  display: inline-block;
+  background-image: url('./static/images/icon/play1.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+/* 上一首 */
+.icon-playPrv{
+  width: auto;
+  height: auto;
+  display: inline-block;
+  background-image: url('./static/images/icon/play_prv.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+/* 下一首 */
+.icon-playNext{
+  width: auto;
+  height: auto;
+  display: inline-block;
+  background-image: url('./static/images/icon/play_next.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
 }
 
 /* 点赞 */
@@ -62,6 +84,15 @@
   height: auto;
   display: inline-block;
   background-image: url('./static/images/icon/pause.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+/* 大型暂停按钮 */
+.icon-pause{
+  width: auto;
+  height: auto;
+  display: inline-block;
+  background-image: url('./static/images/icon/pause1.png');
   background-size: 100%;
   background-repeat: no-repeat;
 }
@@ -125,6 +156,15 @@
   height: auto;
   display: inline-block;
   background-image: url('./static/images/icon/loading.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  animation: loading 1s linear infinite;
+}
+.icon-loading{
+  width: auto;
+  height: auto;
+  display: inline-block;
+  background-image: url('./static/images/icon/loading1.png');
   background-size: 100%;
   background-repeat: no-repeat;
   animation: loading 1s linear infinite;

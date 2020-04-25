@@ -2,7 +2,7 @@ import { req } from "./req";
 // import api_login from "@/views/login/api_login";
 import api_home from "@/pages/home/api_home.js";
 // import api_search from "@/views/search/api_search";
-// import api_play from "@/views/player/api_play";
+import api_play from "@/pages/play/api_play";
 // import api_userInfo from "@/views/user/api_userInfo";
 // import api_rank from "@/views/rank/api_rank";
 // import api_singer from "@/views/singer/api_singer";
@@ -56,7 +56,7 @@ api = Object.assign(
   // api_login,
   api_home,
   // api_search,
-  // api_play,
+  api_play,
   // api_userInfo,
   // api_rank,
   // api_singer,

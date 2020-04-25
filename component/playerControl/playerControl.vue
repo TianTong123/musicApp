@@ -42,7 +42,6 @@ import util from '@/util/utils.js'
 export default {
 	data() {
 		return {
-			playState: 1,//1，没播放， 2 正在播放, 3加载中
 			//控制播放列表
 			isShowPlayList: false,
 			playListHeight: 0,
@@ -55,14 +54,14 @@ export default {
 	},
 	computed:{
 		playList(){
-				let tempList = this.$store.state.playList;
-				if(tempList.length == 0){
-					return tempList==""?[]:tempList;
-				}
-				if(this.$music.src != "" || this.$music.src != null){//如果有歌就播放第一首
-					this.select(tempList[0], 0);
-				}
-				return tempList;
+			let tempList = this.$store.state.playList;
+			if(tempList.length == 0){
+				return tempList==""?[]:tempList;
+			}
+			if(this.$music.src != "" || this.$music.src != null){//如果有歌就播放第一首
+				this.select(tempList[0], 0);
+			}
+			return tempList;
 		},
 		activeIndex:{//当前播放列表下标
 			get() {
@@ -77,6 +76,22 @@ export default {
 				this.$store.state.activeIndex = val;
 			}
 		},
+		playState:{//1，没播放， 2 正在播放, 3加载中
+			get() {
+				return this.$store.state.playState||1
+			},
+			set(val) {
+				this.$store.state.playState = val;
+			}
+		},
+		music:{
+			get(){
+				return this.$store.state.music
+			},
+			set(val){
+				this.$store.state.music = val
+			}
+		}
 	},
 	methods:{
 		play(){
@@ -110,7 +125,9 @@ export default {
 		
 		//跳转到播放详情页
 		toPlayInfo(){
-			console.log("我跳？")
+			//let id = this.playList[this.activeIndex].musicId;
+			this.$global.music = this.$music
+
 			uni.navigateTo({
 			    url: '../../pages/play/play'//'B?id=1'
 			});
