@@ -14,7 +14,7 @@
 			:class="{'uni-drawer--right': rightMode,'uni-drawer--left': !rightMode, 'uni-drawer__content--visible': showDrawer}">
 			<view class="drawer-head">
 				<view class="user-head">
-					<image class="head-user-img" src="../../static/icon/user-head.png" mode="widthFix"></image>
+					<image class="head-user-img" src="http://39.107.123.212:8848/tiantong/file/imgShow/2b99b1e9b0044f85976bff600fc93541.jpg" mode="widthFix"></image>
 				</view>
 				<view class="msg-box">
 					<text class="user-name">甜筒</text>
@@ -23,7 +23,9 @@
 			</view>
 			<view class="list-wrap">
 				<view class="list-item">
-					<text class="list-text">用户登录</text>
+					<navigator url="../../pages/login/login" hover-class="navigator-hover">
+						<text class="list-text">用户登录</text>
+					</navigator>
 				</view>
 				<view class="list-item">
 					<text class="list-text">用户注册</text>

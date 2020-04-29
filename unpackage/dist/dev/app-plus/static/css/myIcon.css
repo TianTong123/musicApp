@@ -150,6 +150,24 @@
   background-size: 100%;
   background-repeat: no-repeat;
 }
+/* 排行 */
+.icon-rank{
+  width: auto;
+  height: auto;
+  display: inline-block;
+  background-image: url('./static/images/icon/rank.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+/* 歌 */
+.icon-music{
+  width: auto;
+  height: auto;
+  display: inline-block;
+  background-image: url('./static/images/icon/singer.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
 /* 加载 */
 .icon-mini-loading{
   width: auto;

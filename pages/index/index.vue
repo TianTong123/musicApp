@@ -1,5 +1,5 @@
 <template>
-	<view class="index" :style="{ marginTop: iStatusBarHeight + 'px'}">
+	<view class="index">
 		<view class="top-bar" :style="{ marginTop: iStatusBarHeight + 'px'}">
 			<image @click="showLeft = true" class="menu" src="../../static/images/icon/menu.png"></image>
 			<scroll-view 
@@ -29,25 +29,25 @@
 			@close="showLeft = false">
 		</uni-drawer>
 		<!-- 显示内容 -->
-		<view class="content" >
+		<view class="content" :style="{ marginTop: iStatusBarHeight + 'px'}">
 			<swiper 
 				@change="onSwiperChange"
 				:current="tabIndex" 
 				class="swiper-box" 
-				style="height: 100vh"
+				style="height: 100%;"
 				:duration="300">
 				<swiper-item class="swripe-item">
 					<home></home>
 				</swiper-item>
 				<swiper-item class="swripe-item">
-					<singer></singer>
-				</swiper-item>
-				<swiper-item class="swripe-item">
-					<rank></rank>
-				</swiper-item>
-				<swiper-item class="swripe-item">
 					<user></user>
 				</swiper-item>
+				<!-- <swiper-item class="swripe-item">
+					<singer></singer>
+				</swiper-item> -->
+				<!-- <swiper-item class="swripe-item">
+					<rank></rank>
+				</swiper-item> -->	
 			</swiper>
 		</view>	
 		
@@ -84,13 +84,7 @@ export default {
 				name: '首页',
 				id: 'home'
 			}, {
-				name: '歌手',
-				id: 'singer'
-			}, {
-				name: '排行',
-				id: 'rank'
-			}, {
-				name: '用户',
+				name: '我的',
 				id: 'user'
 			}],
 			showLeft: false,
@@ -146,22 +140,21 @@ export default {
 	.index .top-bar{
 		position: fixed;
 		top: 0;
-		z-index: 200;
-		justify-content: space-between;
 		width: 750rpx;
-		height: 85rpx;
-		background-color: #111214;
+		height: 100rpx;
+		justify-content: space-between;
+		background-color: #242424;
 	}
 	.index .top-bar .menu{
 		display: inline-block;
-		margin: 25rpx 20rpx;
+		margin: 32.5rpx 40rpx;
 		width: 35rpx;
 		height: 35rpx;
 	}
 	.index .top-bar .nav {
 		display: inline-block;
-		width: 600rpx;
-		height: 85rpx;
+		width: 520rpx;
+		height: 100rpx;
 		flex-direction: row;
 		white-space: nowrap;
 	}
@@ -169,7 +162,7 @@ export default {
 	.index .uni-tab-item {
 		display: inline-block;
 		flex-wrap: nowrap;
-		width: 85rpx;
+		width: 100rpx;
 		padding: 0 14rpx;
 		margin: 0 20rpx;
 	}
@@ -182,26 +175,39 @@ export default {
 	}
 	.index .uni-tab-item-title {
 		color: #8A8B8C;
-		font-size: 25rpx;
-		height: 85rpx;
-		line-height: 85rpx;
+		font-size: 32rpx;
+		height: 100rpx;
+		line-height: 100rpx;
 		flex-wrap: nowrap;
 		white-space: nowrap;
 	}
 
 	.index .top-bar .uni-tab-item-active {
-		background-color: #c20c0c;
+		/* background-color: #c20c0c;
 		border-left: 1px solid #fff;
-		border-right: 1px solid #fff;
+		border-right: 1px solid #fff; */
+		
 	}
 	.index .top-bar .uni-tab-item-active .uni-tab-item-title{
+		font-size: 35rpx;
+		font-weight: bold;
 		color: #fff;
-		font-size: 30rpx;
 	}
 	
-	.index .swiper-box{
-		margin-top: 85rpx;
-		background-color: #242424;
+	.index .content{
+		position: absolute;
+		top: 100rpx;
+		bottom: 100rpx;
+		width: 100%;
+	}
+	.index .content .swiper-box{
+		background-color: #fff;
 		color: #aaa;
+	}
+	.index .content .swiper-box .swripe-item{
+		display: block;
+		width: 100%;
+		height: auto;
+		overflow-y: auto;
 	}
 </style>

@@ -1,0 +1,179 @@
+/*
+ * @Author: TianTong 
+ * @Date: 2019-12-05 10:48:52 
+ * @Last Modified by: mikey.zhaopeng
+ * @Last Modified time: 2020-04-01 11:21:32
+ */
+
+/* 小型播放按钮 */
+.icon-mini-play{
+  width: auto;
+  height: auto;
+  display: inline-block;
+  background-image: url('./static/images/icon/play.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+/* 大型播放按钮 */
+.icon-play{
+  width: auto;
+  height: auto;
+  display: inline-block;
+  background-image: url('./static/images/icon/play1.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+/* 上一首 */
+.icon-playPrv{
+  width: auto;
+  height: auto;
+  display: inline-block;
+  background-image: url('./static/images/icon/play_prv.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+/* 下一首 */
+.icon-playNext{
+  width: auto;
+  height: auto;
+  display: inline-block;
+  background-image: url('./static/images/icon/play_next.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+/* 点赞 */
+.icon-islike{
+  width: auto;
+  height: auto;
+  display: inline-block;
+  background-image: url('./static/images/icon/isLike.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+/* 喜欢 */
+.icon-like{
+  width: auto;
+  height: auto;
+  display: inline-block;
+  background-image: url('./static/images/icon/like.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+/* 收藏 */
+.icon-collect{
+  width: auto;
+  height: auto;
+  display: inline-block;
+  background-image: url('./static/images/icon/collect.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+/* 增加 */
+.icon-add{
+  width: auto;
+  height: auto;
+  display: inline-block;
+  background-image: url('./static/images/icon/add.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+/* 暂停 */
+.icon-mini-pause{
+  width: auto;
+  height: auto;
+  display: inline-block;
+  background-image: url('./static/images/icon/pause.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+/* 大型暂停按钮 */
+.icon-pause{
+  width: auto;
+  height: auto;
+  display: inline-block;
+  background-image: url('./static/images/icon/pause1.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+/* 扩展 */
+.icon-mini-extend{
+  width: auto;
+  height: auto;
+  display: inline-block;
+  background-image: url('./static/images/icon/extend.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+/* 返回 */
+.icon-mini-return{
+  width: auto;
+  height: auto;
+  display: inline-block;
+  background-image: url('./static/images/icon/arrow-left.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+/* 菜单 */
+.icon-mini-menu{
+  width: auto;
+  height: auto;
+  display: inline-block;
+  background-image: url('./static/images/icon/menu.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+/* 垃圾桶 */
+.icon-mini-clear{
+  width: auto;
+  height: auto;
+  display: inline-block;
+  background-image: url('./static/images/icon/clear.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+/* 锁 */
+.icon-mini-lock{
+  width: auto;
+  height: auto;
+  display: inline-block;
+  background-image: url('./static/images/icon/lock.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+/* 解锁 */
+.icon-mini-unlock{
+  width: auto;
+  height: auto;
+  display: inline-block;
+  background-image: url('./static/images/icon/unLock.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+/* 加载 */
+.icon-mini-loading{
+  width: auto;
+  height: auto;
+  display: inline-block;
+  background-image: url('./static/images/icon/loading.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  animation: loading 1s linear infinite;
+}
+.icon-loading{
+  width: auto;
+  height: auto;
+  display: inline-block;
+  background-image: url('./static/images/icon/loading1.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  animation: loading 1s linear infinite;
+}
+@keyframes loading{
+  0%{
+    transform: rotateZ(0deg);
+  }
+  100%{
+    transform: rotateZ(360deg);
+  }
+}

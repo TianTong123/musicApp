@@ -1,0 +1,18 @@
+/* 普通按钮 */
+.my-normal-btn{
+	display: inline-block;
+	vertical-align: top;
+	width: 40rpx;
+	height: 40rpx;
+}
+.my-normal-btn i{
+	display: inline-block;
+	width: 40rpx;
+	height: 40rpx;
+}
+.my-normal-btn i:active{
+	transform: translateX(5rpx) translateY(5rpx);
+	width: 35rpx;
+	height: 35rpx;
+}
+

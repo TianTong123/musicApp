@@ -4,7 +4,7 @@
 		<view class="play-bg"><image class="bg-img" :src="$global.imgUrl+musicInfo.songImg"></image></view>
 		<!-- 头部 -->
 		<view class="play-head" :style="{ marginTop: iStatusBarHeight + 'px'}">
-			<view class="my-normal-btn title-btn" @click="showPlayList">
+			<view class="my-normal-btn title-btn" @click="goIndex">
 				<i class="icon-mini-return"></i>
 			</view>
 			<uni-notice-bar 
@@ -16,17 +16,19 @@
 		</view>
 		
 		<!--封面 -->
-		<view class="play-poster" :style="{ marginTop: iStatusBarHeight + 'px'}" v-show="false">
-			<view class="poster-wrap"><image class="poster" :src="$global.imgUrl+musicInfo.songImg"></image></view>
+		<view class="play-poster" :style="{ marginTop: iStatusBarHeight + 'px'}" v-show="!isHiddenPoster">
+			<view :class="{'poster-wrap': playState != 1, 'poster-wrap-no-ani': playState == 1}"  @click="isHiddenPoster = true">
+				<image mode="aspectFill" :src="$global.imgUrl+musicInfo.songImg"></image>
+			</view>
 			<view class="btn-bar">
 				<view class="my-normal-btn title-btn"><i class="icon-like"></i></view>
 				<view class="my-normal-btn title-btn"><i class="icon-collect"></i></view>
 				<view class="my-normal-btn title-btn"><i class="icon-islike"></i></view>
-				<view class="my-normal-btn title-btn"><i class="icon-mini-menu"></i></view>
+				<view class="my-normal-btn title-btn"  @click="showPlayList"><i class="icon-mini-menu"></i></view>
 			</view>
 		</view>
 		<!-- 歌词 -->
-		<view class="lyric" :style="{ marginTop: iStatusBarHeight + 'px'}">
+		<view class="lyric" :style="{ marginTop: iStatusBarHeight + 'px'}" @click="isHiddenPoster = false" v-show="isHiddenPoster">
 			<view class="lyric-wrap" :style="{marginTop: scrollTop + 'rpx'}">
 				<text v-show="false">纯音乐</text>
 				<text
@@ -37,28 +39,56 @@
 				></text>
 			</view>
 		</view>
-		
+
 		<!-- 控制条 -->
 		<view class="play-control-bar">
+					
 			<!-- 进度条 -->
-			<view class="progress-bar">
+			<view class="progress-bar" @click="progressDrag" @touchmove="progressDrag">
 				<text class="p-time" style="left: 30rpx;">{{playTime}}</text>
-				<view class="progress-bg">
-					<view class="progress-value" :style="{width: progresValue + 'rpx'}">
-						<view class="progress-icon"></view>
-					</view>
-				</view>
+				<slider
+					class="progress-bg"
+					min="0"
+					:max="mLength"
+					:value="nowPlayTime/1000"
+					activeColor="#c20c0c"
+					backgroundColor="#fff"
+					block-size="12"
+					@change="progressDrag"/>
 				<text class="p-time" style="right: 30rpx;">{{totalDuration}}</text>
 			</view>
 			<!-- 按钮 -->
 			<view class="play-btn-wrap">
 				<view class="small-btn my-normal-btn"><i class="icon-playPrv"></i></view>
 				<view class="play-btn my-normal-btn">
-					<i v-show="playState == 1" class="icon-play" @click="play"></i>
-					<i v-show="playState == 2" class="icon-pause" @click="play"></i>
+					{{test}}
+					<i v-show="playState == 1" class="icon-play" @click="playMusic"></i>
+					<i v-show="playState == 2" class="icon-pause" @click="playMusic"></i>
 					<i v-show="playState == 3" class="icon-loading"></i>
 				</view>
 				<view class="small-btn my-normal-btn"><i class="icon-playNext"></i></view>
+			</view>
+		</view>
+		
+		<!-- 播放列表 -->
+		<view class="play-list-bg" @click="showPlayList" v-show="isShowPlayList"></view>
+		<view class="play-list" :style="{ height: playListHeight + 'rpx'}">
+			<view class="play-list-head">
+				<view class="play-list-title">播放列表/{{playList.length}}</view>
+				<view class="play-list-btn my-normal-btn"><i class="icon-mini-clear"></i></view>
+			</view>
+			<view class="play-list-wrap">
+				<view class="play-card" 
+					@click="selectMuc(e, index)"
+					v-for="(e, index) in playList" 
+					:key="index">
+					<view :class="{'play-list-music-info':true, 'active': index == activeIndex}">
+						<text class="info-wrap">{{index+1}}、{{e.name}}
+							<text class="play-list-singer">-{{e.singer}}</text>
+						</text>
+						<text class="time">{{timeFormat(e.timeLength)}}</text>
+					</view>
+				</view>
 			</view>
 		</view>
 	</view>
@@ -74,15 +104,18 @@ export default {
 	data() {
 		return {
 			musicInfo: '',
-			iStatusBarHeight:0,
-			progresValue: 0,//进度条长度，总长度为530
+			iStatusBarHeight: 0,
 			totalDuration: "00:00",//总播放时间
-			playTime: "00:00",//当前播放时长
+			playTime: "00:00",//当前播放时间，格式 dd:ss
 			mLength: 0,//音乐时长
 			nowPlayTime: "",//当前播放毫秒数
 			lyricIndex: 0,//当前歌词激活的下标
-			lyric: [],
-			scrollTop: 0,
+			lyric: [],//歌词列表
+			scrollTop: 0,//滚动高度
+			isHiddenPoster: false, //true为隐藏封面， false为显示封面
+			playListHeight: 0,
+			isShowPlayList: false,
+			test: '',
 		}
 	},
 	computed:{
@@ -91,19 +124,11 @@ export default {
 			if(tempList.length == 0){
 				return tempList==""?[]:tempList;
 			}
-			if(this.$music.src != "" || this.$music.src != null){//如果有歌就播放第一首
-				this.select(tempList[0], 0);
-			}
 			return tempList;
 		},
 		activeIndex:{//当前播放列表下标
 			get() {
-				let index = this.$store.state.activeIndex;
-				if( index != ''){
-					this.select(this.playList[index], index);
-					return index
-				}
-				return 0;
+				return this.$store.state.activeIndex;
 			},
 			set(val) {
 				this.$store.state.activeIndex = val;
@@ -118,20 +143,17 @@ export default {
 			}
 		}
 	},
-	onLoad() {
+	onLoad(val) {
 		this.iStatusBarHeight = uni.getSystemInfoSync().statusBarHeight;
 		this.$music = this.$global.music;
-		this.getMusic(6, true)
+		this.getMusic(val.id, false);
 	},
 	methods: {
 		//获取音乐信息
 		getMusic(id, type=false){
 			let parames = {
-				musicId: 6,
+				musicId: id,
 			}
-			// if(id){
-			// 	parames.musicId = id
-			// }
 			this.$http.getMusic( parames ).then(({data}) => {
 				if (data.code == 0){
 					this.musicInfo = data.data;
@@ -139,9 +161,14 @@ export default {
 					this.mLength = data.data.timeLength;
 					this.totalDuration = util.timeFormat(this.mLength);
 					if( type ){
+						if(this.$music.src != null || this.$music.src != '') {
+							this.$music.pause()
+						}
+						this.playState = 3
+						this.$music = null
 						this.$music = uni.createInnerAudioContext();
 						this.$music.src = this.$global.musicUrl+data.data.profileUrl;
-						this.play()
+						this.playMusic()
 					}
 					this.initParames()
 					//增加播放量
@@ -154,12 +181,10 @@ export default {
 		},
 		
 		//播放方法
-		play(){
-			if(this.$music.src==null){
-				return
-			}
+		playMusic(){
 			if( this.playState != 2 ){
-		    this.playState = 3
+				this.playState = 3
+				this.$music.offPlay();
 				this.$music.play();//播放音乐
 				this.$music.onPlay(() => {
 					this.playState = 2
@@ -169,27 +194,6 @@ export default {
 		    this.playState = 1;
 				return
 		  }
-			
-			
-			this.$music.onTimeUpdate(() => {
-				//时间处理
-				let mLength = this.$music.currentTime;
-				this.nowPlayTime =  parseInt( mLength  * 1000);
-				this.playTime = util.timeFormat(mLength);
-
-				//进度条处理
-				/*进度条百分比计算*/
-				var long = mLength * 530 / this.mLength;//得到进度条长度，650是进度条总长度
-				this.progresValue = long;
-
-
-				 //结束处理
-				// if( this.music.ended ){//归零
-				// 	 this.music.currentTime = 0;
-				// 	 this.nowPlayTime = 0;
-				// 	 this.changeMusic(false);
-				//  }
-			});
 		},
 		
 		//激活歌词
@@ -202,6 +206,7 @@ export default {
 				this.lyricIndex = index;
 				return true;
 			}
+
 			return false;
 		},
 		
@@ -222,38 +227,37 @@ export default {
 				if(this.lyric[i] == null){ //判空
 					break
 				}
-				if(this.lyric[i].TimeMs >= this.nowPlayTime){
-					this.lyricIndex = i;
+				if(this.lyric[i].TimeMs > this.nowPlayTime && this.nowPlayTime < this.lyric[i+1].TimeMs){
+					this.lyricIndex = i-1;
 					break;
 				}
 			}
-
-			//计算歌词整体高度
+			
+			//计算歌词滚动整体高度
 			let tempHeight = 0;
 			for(let i = 0; i <this.lyricIndex; i ++){
 				tempHeight += (60 + Math.ceil(this.lyric[i].LrcLine.length / 18 - 1) * 30)
 			}
-			
 	
-			this.scrollTop = - tempHeight + 350;//150是初始高度.有过渡动画
-			//this.$refs.lyricWrap.scrollTop =  tempHeight - 150;//没过渡动画的
+			this.scrollTop = -tempHeight;
 		},
-
+		
+		//进度条拖动
+		progressDrag(event){
+			this.$music.seek(event.detail.value);
+			this.playMusic();
+		},
+				
 		//初始化参数
 		initParames(){
 			//赋值
 			this.nowPlayTime = 0;
-			this.progresValue = 0;
 			//当音乐是暂停
 			if( this.playState == 1){ 
 			  //时间处理
 				let mLength = this.$music.currentTime;
 				this.nowPlayTime =  parseInt( mLength  * 1000);
 				this.playTime = util.timeFormat(mLength);
-				
-				/*进度条百分比计算*/
-				let longer = mLength * 530 / this.mLength;//得到进度条长度，650是进度条总长度
-				this.progresValue = longer
 			}
 			//如果是在播放或者加载
 			else{
@@ -263,10 +267,6 @@ export default {
 					let mLength = this.$music.currentTime;
 					this.nowPlayTime =  parseInt( mLength  * 1000);
 					this.playTime = util.timeFormat(mLength);
-					
-					/*进度条百分比计算*/
-					let longer = mLength * 530 / this.$music.duration;//得到进度条长度，650是进度条总长度
-					this.progresValue = longer
 					// //结束处理
 					// if( this.music.ended ){//归零
 					// 	this.music.currentTime = 0;
@@ -275,41 +275,15 @@ export default {
 					// }
 				})
 			}
-
-			if(this.lyric == null){//纯音乐打断
-				return
-			}
-			
-			//初始化歌词位置
-			let firsIndex = "";
-			for(let i = 0; i <this.lyric.length; i ++){
-				if(this.lyric[i].type == 5){
-					firsIndex = i;
-					break;
-				}
-			}
-			//每一行的高度为60，高亮位置放在100，所以把第一条歌词放在100 -60
-			let lHeight = 100-firsIndex*60;
-			this.scrollTop  = -lHeight;//下面注释的，是为了适配所有情况要用的(暂时不写，没时间啊)
 		},
+	
 		//选中播放列表的音乐
-		select(val, index){
+		selectMuc(val, index){
 			this.selectMusic = val;
 			this.activeIndex = index;
-			this.test = val.name;
-			this.$music = uni.createInnerAudioContext();
-			this.$music.src = this.$global.musicUrl+val.profileUrl;
-			this.playState = 3
-			this.$music.play();//播放音乐
-			this.$music.onPlay(() => {
-				this.playState = 2
-			});
+			this.getMusic(val.musicId, true)
 		},
-		//旋转
-		rotatePoster() {
-			this.animation.rotate(Math.random() * 720 - 360).step()
-			this.animationData = this.animation.export()
-		},
+		
 		//固定字数
 		fontFormat(val){   
 			if(val.length < 18){
@@ -326,6 +300,19 @@ export default {
 				}
 			}
 			return font
+		},
+		
+		//时间格式
+		timeFormat: (val) => util.timeFormat(val),
+		
+		//显示播放列表
+		showPlayList(){
+			this.isShowPlayList = !this.isShowPlayList
+			this.playListHeight = this.isShowPlayList?710:0;
+		},
+		
+		goIndex(){
+			uni.navigateBack()
 		}
 	},
 	watch:{
@@ -334,6 +321,7 @@ export default {
       //滚动歌词
       //this.$refs.lyricWrap.scrollTop  += 35;
       this.lyricScoll();
+			
     },
   }
 }
@@ -402,6 +390,18 @@ export default {
 	overflow: hidden;
 	animation: loading 26s linear infinite;
 }
+.play .play-poster .poster-wrap-no-ani{
+	position: absolute;
+	top: 45%;
+	left: 50%;
+	margin-top: -225rpx;
+	margin-left: -225rpx;
+	height: 450rpx;
+	width: 450rpx;
+	border: 10rpx solid rgba(238, 238, 238, .5);
+	border-radius: 225rpx;
+	overflow: hidden;
+}
 .play .play-poster .poster-wrap .poster{
 	position: absolute;
 	top: 50%;
@@ -420,6 +420,7 @@ export default {
 /* 控制条 */
 .play .play-control-bar{
 	position: absolute;
+	z-index: 9999;
 	bottom: 0;
 	height: 18.75vh;
 	width: 750rpx;
@@ -431,31 +432,13 @@ export default {
 	height: 6vh;
 }
 .play .progress-bar .progress-bg{
-	margin: 2.85vh auto;
+	margin: 1.65vh auto;
 	width: 530rpx;
-	height: 0.3vh;
-	background-color: #fff;
-	border-radius: 0.15vh;
-}
-.play .progress-bar .progress-bg .progress-value{
-	position: relative;
-	height: .3vh;
-	border-radius: 0.15vh;
-	background-color: #c20c0c;
-}
-.play .progress-bar .progress-bg .progress-value .progress-icon{
-	position: absolute;
-	top: 50%;
-	right: 0;
-	transform: translateY(-50%);
-	margin-right: -9rpx;
-	height: 18rpx;
-	width: 18rpx;
-	border-radius: 9rpx;
-	background-color: #C20C0C;
+	height: 2.7vh;
 }
 .play .progress-bar .p-time{
 	position: absolute;
+	margin-top: .3vh;
 	top: 0;
 	width: ;
 	font-size: 20rpx;
@@ -503,7 +486,7 @@ export default {
 }
 .play .lyric .lyric-wrap{
 	position: absolute;
-	top: 0;
+	top: 50%;
 	width: 750rpx;
 	padding-bottom: 80vh;
 	transition-duration: .3s;
@@ -512,7 +495,7 @@ export default {
 	display: block;
 	margin: 30rpx auto;
 	width: 600rpx;
-	font-size: 25rpx;
+	font-size: 30rpx;
 	text-align: center;
 	line-height: 30rpx;
 	white-space: nowrap;
@@ -521,6 +504,84 @@ export default {
 .play .lyric .lyric-wrap .active-line{
 	color: #01e5ff;
 	font-size: 30rpx;
+}
+
+.play .play-list{
+	position: fixed;
+	bottom: 0;
+	z-index: 10000;
+	width: 750rpx;
+	height: 710rpx;
+	background-color: #242424;
+	border-bottom: 1rpx solid #333;
+	overflow: hidden;
+	transition-duration: .5s;
+}
+.play .play-list-bg{
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 10;
+	height: 100vh;
+	width: 750rpx;
+	background-color: rgba(0,0,0,.6);
+}
+.play .play-list .play-list-head{
+	display: block;
+	width: 750rpx;
+	height: 79rpx;
+	color: #aaa;
+	border-bottom: 1rpx solid #333;
+	background-color: #111214;
+}
+.play .play-list .play-list-head .play-list-title{
+	display: inline-block;
+	padding-left: 30rpx;
+	color: #aaa;
+	line-height: 79rpx;
+	font-size: 30rpx;
+}
+.play .play-list .play-list-head .play-list-btn{
+	vertical-align: top;
+	float: right;
+	margin: 20rpx 30rpx 20rpx 0;
+}
+.play .play-list .play-list-wrap{
+	width: 750rpx;
+	height: 640rpx;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+.play .play-list-wrap .play-list-music-info{
+	display: block;
+	padding-left: 30rpx;
+	width: 720rpx;
+	height: 79rpx;
+	font-size: 30rpx;
+	line-height: 80rpx;
+	border-bottom: 1rpx solid #333;
+	color: #aaa;
+}
+.play .play-list-wrap .play-list-music-info .info-wrap{
+	float: left;
+	width: 600rpx;
+	height: 80rpx;
+	overflow: hidden;
+	white-space:nowrap;
+	text-overflow:ellipsis;
+}
+.play .play-list-wrap .play-list-music-info .time{
+	float: right;
+	margin-right: 30rpx;
+}
+.play .play-list-wrap .play-list-music-info .play-list-singer{
+	margin-left: 10rpx;
+	font-size: 20rpx;
+	color: #666;
+}
+.play .play-list-wrap .active{
+	color: #01e5ff;
+	background-color: #353535;
 }
 @keyframes loading{
   0%{

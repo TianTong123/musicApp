@@ -15,4 +15,10 @@
 	width: 35rpx;
 	height: 35rpx;
 }
+/* 超小按钮 */
+.my-mini-btn{
+	display: inline-block;
+	width: 20rpx;
+	height: 20rpx;
+}
 

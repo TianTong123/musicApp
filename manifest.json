@@ -105,5 +105,9 @@
     },
     "mp-toutiao" : {
         "usingComponents" : true
+    },
+    "h5" : {
+        "title" : "TinaTongMusic",
+        "domain" : "cangshu.ltd:1111"
     }
 }

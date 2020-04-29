@@ -59,7 +59,7 @@ export default {
 				return tempList==""?[]:tempList;
 			}
 			if(this.$music.src != "" || this.$music.src != null){//如果有歌就播放第一首
-				this.select(tempList[0], 0);
+				//this.select(tempList[0], 0);
 			}
 			return tempList;
 		},
@@ -67,7 +67,7 @@ export default {
 			get() {
 				let index = this.$store.state.activeIndex;
 				if( index != ''){
-					this.select(this.playList[index], index);
+					//this.select(this.playList[index], index);
 					return index
 				}
 				return 0;
@@ -114,6 +114,8 @@ export default {
 			this.selectMusic = val;
 			this.activeIndex = index;
 			this.test = val.name;
+			this.$music.stop();
+			this.$music = null;
 			this.$music = uni.createInnerAudioContext();
 			this.$music.src = this.$global.musicUrl+val.profileUrl;
 			this.playState = 3
@@ -126,10 +128,12 @@ export default {
 		//跳转到播放详情页
 		toPlayInfo(){
 			//let id = this.playList[this.activeIndex].musicId;
+			if(this.$music.src == null || this.$music == '')
+				return
 			this.$global.music = this.$music
-
+			
 			uni.navigateTo({
-			    url: '../../pages/play/play'//'B?id=1'
+			  url: '../../pages/play/play?id=' + this.playList[this.activeIndex].musicId//'B?id=1'
 			});
 		},
 
@@ -154,7 +158,7 @@ export default {
 	bottom: 0;
 	height: 100rpx;
 	width: 750rpx;
-	background-color: #111214;
+	background-color: #242424;
 	color: #fff;
 	font-size: 20rpx;
 }
@@ -189,7 +193,7 @@ export default {
 	width: 750rpx;
 	height: 710rpx;
 	background-color: #242424;
-	border-bottom: 1rpx solid #aaa;
+	border-bottom: 1rpx solid #333;
 	overflow: hidden;
 	transition-duration: .5s;
 }
@@ -207,8 +211,8 @@ export default {
 	width: 750rpx;
 	height: 79rpx;
 	color: #aaa;
-	border-bottom: 1rpx solid #aaa;
-	background-color: #111214;
+	border-bottom: 1rpx solid #333;
+	background-color: #17181a;
 }
 .play-control-bar .play-list .play-list-head .play-list-title{
 	display: inline-block;
@@ -235,7 +239,7 @@ export default {
 	height: 79rpx;
 	font-size: 30rpx;
 	line-height: 80rpx;
-	border-bottom: 1rpx solid #666;
+	border-bottom: 1rpx solid #333;
 	color: #aaa;
 }
 .play-control-bar .play-list-wrap .play-list-music-info .info-wrap{

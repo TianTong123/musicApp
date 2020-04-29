@@ -321,7 +321,7 @@
 	}
 
 	.uni-noticebar__content-text {
-		font-size: 40rpx !important;
+		font-size: 35rpx !important;
 		line-height: 70rpx;
 		/* #ifndef APP-NVUE */
 		word-break: break-all;

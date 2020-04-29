@@ -180,6 +180,7 @@ export const http = ({
  */
 axios.defaults.adapter = function(config) {
     return new Promise((resolve, reject) => {
+			console.log(config.params, typeof config.params, config.sslVerify)
         var settle = require('axios/lib/core/settle');
         var buildURL = require('axios/lib/helpers/buildURL');
         uni.request({
@@ -188,8 +189,8 @@ axios.defaults.adapter = function(config) {
             header: config.headers,
             data: config.params,
             dataType: config.dataType,
-            responseType: typeof config.params,
-            sslVerify: config.sslVerify,
+            //responseType: typeof config.params,
+            //sslVerify: config.sslVerify,
             complete: function complete(response) {
                 response = {
                     data: response.data,
