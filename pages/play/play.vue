@@ -147,6 +147,10 @@ export default {
 		this.iStatusBarHeight = uni.getSystemInfoSync().statusBarHeight;
 		this.$music = this.$global.music;
 		this.getMusic(val.id, false);
+		// 保持屏幕常亮
+		uni.setKeepScreenOn({
+		    keepScreenOn: true
+		});
 	},
 	methods: {
 		//获取音乐信息

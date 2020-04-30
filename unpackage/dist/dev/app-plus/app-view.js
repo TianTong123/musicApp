@@ -3702,21 +3702,24 @@ var render = function() {
     "v-uni-view",
     { staticClass: _vm._$g(0, "sc"), style: _vm._$g(0, "s"), attrs: { _i: 0 } },
     [
+      _c("v-uni-view", { staticClass: _vm._$g(1, "sc"), attrs: { _i: 1 } }, [
+        _vm._v("登录")
+      ]),
       _c(
         "v-uni-view",
-        { staticClass: _vm._$g(1, "sc"), attrs: { _i: 1 } },
+        { staticClass: _vm._$g(2, "sc"), attrs: { _i: 2 } },
         [
           _c(
             "v-uni-view",
-            { staticClass: _vm._$g(2, "sc"), attrs: { _i: 2 } },
+            { staticClass: _vm._$g(3, "sc"), attrs: { _i: 3 } },
             [
               _c("v-uni-input", {
-                staticClass: _vm._$g(3, "sc"),
-                attrs: { maxlength: "30", placeholder: "账号", _i: 3 },
+                staticClass: _vm._$g(4, "sc"),
+                attrs: { maxlength: "30", placeholder: "账号", _i: 4 },
                 model: {
-                  value: _vm._$g(3, "v-model"),
+                  value: _vm._$g(4, "v-model"),
                   callback: function($$v) {
-                    _vm.$handleVModelEvent(3, $$v)
+                    _vm.$handleVModelEvent(4, $$v)
                   },
                   expression: "formLogin.account"
                 }
@@ -3726,20 +3729,20 @@ var render = function() {
           ),
           _c(
             "v-uni-view",
-            { staticClass: _vm._$g(4, "sc"), attrs: { _i: 4 } },
+            { staticClass: _vm._$g(5, "sc"), attrs: { _i: 5 } },
             [
               _c("v-uni-input", {
-                staticClass: _vm._$g(5, "sc"),
+                staticClass: _vm._$g(6, "sc"),
                 attrs: {
                   maxlength: "30",
                   placeholder: "密码",
                   password: true,
-                  _i: 5
+                  _i: 6
                 },
                 model: {
-                  value: _vm._$g(5, "v-model"),
+                  value: _vm._$g(6, "v-model"),
                   callback: function($$v) {
-                    _vm.$handleVModelEvent(5, $$v)
+                    _vm.$handleVModelEvent(6, $$v)
                   },
                   expression: "formLogin.password"
                 }
@@ -3750,19 +3753,36 @@ var render = function() {
           _c(
             "v-uni-button",
             {
-              attrs: { type: "primary", _i: 6 },
+              attrs: { type: "primary", _i: 7 },
               on: {
                 click: function($event) {
                   return _vm.$handleViewEvent($event)
                 }
               }
             },
-            [_vm._v("登录")]
+            [_vm._v("确认")]
           )
         ],
         1
       ),
-      _c("v-uni-text", { staticClass: _vm._$g(7, "sc"), attrs: { _i: 7 } }, [
+      _vm._$g(8, "i")
+        ? _c(
+            "v-uni-view",
+            { staticClass: _vm._$g(8, "sc"), attrs: { _i: 8 } },
+            [
+              _c("v-uni-image", {
+                staticClass: _vm._$g(9, "sc"),
+                attrs: { src: _vm._$g(9, "a-src"), _i: 9 }
+              }),
+              _c("v-uni-image", {
+                staticClass: _vm._$g(10, "sc"),
+                attrs: { src: _vm._$g(10, "a-src"), _i: 10 }
+              })
+            ],
+            1
+          )
+        : _vm._e(),
+      _c("v-uni-text", { staticClass: _vm._$g(11, "sc"), attrs: { _i: 11 } }, [
         _vm._v("十分感谢仓鼠团的大家。ありがと")
       ])
     ],
@@ -3857,7 +3877,7 @@ if(false) {}
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../../Software/HBuilderX/plugins/uniapp-cli/node_modules/css-loader/dist/runtime/api.js */ 15);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, "\n.login{\r\n\tposition: absolute;\r\n\ttop: 0;\r\n\tbottom: 0;\r\n\twidth: 750rpx;\n}\n.login .login-form{\r\n\tmargin: 20vh 50rpx 40vh 50rpx;\r\n\twidth: 650rpx;\r\n\theight: 30vh;\n}\n.login .login-form .form-item{\r\n\tmargin-bottom: 3vh;\r\n\twidth: 650rpx;\r\n\theight: 8vh;\r\n\tborder-bottom: 2rpx solid #242424;\n}\n.login .login-form .form-item .input{\r\n\twidth: 650rpx;\r\n\theight: 8vh;\n}\n.login  .login-bottom-tip{\r\n\tdisplay: block;\r\n\twidth: 750rpx;\r\n\tfont-size: 25rpx;\r\n\ttext-align: center;\n}\n", ""]);
+exports.push([module.i, "\n.login{\r\n\tposition: absolute;\r\n\ttop: 0;\r\n\tbottom: 0;\r\n\twidth: 750rpx;\n}\n.login .title{\r\n\tmargin: 20vh auto 0 auto;\r\n\theight: 10vh;\r\n\twidth: 650rpx;\r\n\tfont-size: 3vh;\r\n\tline-height: 10vh;\r\n\tfont-weight: bold;\n}\n.login .login-form{\r\n\tmargin: 0 50rpx 30vh 50rpx;\r\n\twidth: 650rpx;\r\n\theight: 30vh;\n}\n.login .login-form .form-item{\r\n\tmargin-bottom: 3vh;\r\n\twidth: 650rpx;\r\n\theight: 8vh;\r\n\tborder-bottom: 2rpx solid #242424;\n}\n.login .login-form .form-item .input{\r\n\twidth: 650rpx;\r\n\theight: 8vh;\n}\n.login  .login-bottom-tip{\r\n\tdisplay: block;\r\n\twidth: 750rpx;\r\n\tfont-size: 25rpx;\r\n\ttext-align: center;\n}\n.login .welcome{\r\n\tposition: fixed;\r\n\tz-index: 100;\r\n\ttop: 0;\r\n\twidth: 750rpx;\r\n\theight: 100vh;\n}\n.login .welcome uni-image{\r\n\tposition: absolute;\r\n\ttop: 50%;\r\n\tleft: 50%;\r\n\twidth: 750rpx;\r\n\theight: 100vh;\r\n\topacity: .5;\r\n\t-webkit-transform-origin: 50% 100%;\r\n\t        transform-origin: 50% 100%;\r\n\t-webkit-transform: translateX(-50%) translateY(-50%) rotateZ(0deg);\r\n\t        transform: translateX(-50%) translateY(-50%) rotateZ(0deg);\n}\n.login .wel1{\r\n\t-webkit-animation: loading1 2s linear 1;\r\n\t        animation: loading1 2s linear 1;\n}\n.login .wel2{\r\n\t-webkit-animation: loading2 2s linear 1;\r\n\t        animation: loading2 2s linear 1;\n}\n@-webkit-keyframes loading1{\n0%{\r\n    width: 750rpx;\r\n\t\theight: 100vh;\r\n\t\t-webkit-transform: translateX(-50%) translateY(-50%) rotateZ(0deg);\r\n\t\t        transform: translateX(-50%) translateY(-50%) rotateZ(0deg);\n}\n50%{\r\n\t\twidth: 1000rpx;\r\n\t\theight: 133vh;\r\n\t\topacity: 1;\r\n\t  -webkit-transform: translateX(-50%) translateY(-50%) rotateZ(0deg);\r\n\t          transform: translateX(-50%) translateY(-50%) rotateZ(0deg);\n}\n100%{\r\n\t\twidth: 1000rpx;\r\n\t\theight: 133vh;\r\n    -webkit-transform: translateX(-50%) translateY(-50%) rotateZ(-45deg);\r\n            transform: translateX(-50%) translateY(-50%) rotateZ(-45deg);\n}\n}\n@keyframes loading1{\n0%{\r\n    width: 750rpx;\r\n\t\theight: 100vh;\r\n\t\t-webkit-transform: translateX(-50%) translateY(-50%) rotateZ(0deg);\r\n\t\t        transform: translateX(-50%) translateY(-50%) rotateZ(0deg);\n}\n50%{\r\n\t\twidth: 1000rpx;\r\n\t\theight: 133vh;\r\n\t\topacity: 1;\r\n\t  -webkit-transform: translateX(-50%) translateY(-50%) rotateZ(0deg);\r\n\t          transform: translateX(-50%) translateY(-50%) rotateZ(0deg);\n}\n100%{\r\n\t\twidth: 1000rpx;\r\n\t\theight: 133vh;\r\n    -webkit-transform: translateX(-50%) translateY(-50%) rotateZ(-45deg);\r\n            transform: translateX(-50%) translateY(-50%) rotateZ(-45deg);\n}\n}\n@-webkit-keyframes loading2{\n0%{\r\n    width: 750rpx;\r\n  \theight: 100vh;\r\n\t\t-webkit-transform: translateX(-50%) translateY(-50%) rotateZ(0deg);\r\n\t\t        transform: translateX(-50%) translateY(-50%) rotateZ(0deg);\n}\n50%{\r\n  \twidth: 1000rpx;\r\n  \theight: 133vh;\r\n\t\topacity: 1;\r\n\t  -webkit-transform:translateX(-50%) translateY(-50%) rotateZ(0deg);\r\n\t          transform:translateX(-50%) translateY(-50%) rotateZ(0deg);\n}\n100%{\r\n\t\twidth: 1000rpx;\r\n\t\theight: 133vh;\r\n    -webkit-transform:translateX(-50%) translateY(-50%) rotateZ(45deg);\r\n            transform:translateX(-50%) translateY(-50%) rotateZ(45deg);\n}\n}\n@keyframes loading2{\n0%{\r\n    width: 750rpx;\r\n  \theight: 100vh;\r\n\t\t-webkit-transform: translateX(-50%) translateY(-50%) rotateZ(0deg);\r\n\t\t        transform: translateX(-50%) translateY(-50%) rotateZ(0deg);\n}\n50%{\r\n  \twidth: 1000rpx;\r\n  \theight: 133vh;\r\n\t\topacity: 1;\r\n\t  -webkit-transform:translateX(-50%) translateY(-50%) rotateZ(0deg);\r\n\t          transform:translateX(-50%) translateY(-50%) rotateZ(0deg);\n}\n100%{\r\n\t\twidth: 1000rpx;\r\n\t\theight: 133vh;\r\n    -webkit-transform:translateX(-50%) translateY(-50%) rotateZ(45deg);\r\n            transform:translateX(-50%) translateY(-50%) rotateZ(45deg);\n}\n}\r\n", ""]);
 // Exports
 module.exports = exports;
 

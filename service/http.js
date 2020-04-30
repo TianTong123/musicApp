@@ -127,7 +127,9 @@ export const http = ({
     method: method,
     url: url,
     timeout: 20000,
-    headers: {}
+    headers: {
+			//'Content-Type': 'application/x-www-form-urlencoded'  
+		}
   };
   
   // 用来覆盖默认的超时时间
@@ -150,7 +152,7 @@ export const http = ({
     } else {
       // 有参数才在地址后面拼字符串
       if(Object.keys(params).length > 0){
-          config.url += `/${encodeURIComponent(JSON.stringify(params))}`;
+        config.url += `/${encodeURIComponent(JSON.stringify(params))}`;
       }
     }
   } else {
@@ -180,16 +182,15 @@ export const http = ({
  */
 axios.defaults.adapter = function(config) {
     return new Promise((resolve, reject) => {
-			console.log(config.params, typeof config.params, config.sslVerify)
         var settle = require('axios/lib/core/settle');
         var buildURL = require('axios/lib/helpers/buildURL');
         uni.request({
             method: config.method.toUpperCase(),
             url: config.url,
             header: config.headers,
-            data: config.params,
-            dataType: config.dataType,
-            //responseType: typeof config.params,
+						data: config.method.toUpperCase()=='GET'?config.params:config.data,
+            dataType: 'json',
+            responseType: 'json',
             //sslVerify: config.sslVerify,
             complete: function complete(response) {
                 response = {

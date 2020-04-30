@@ -1,16 +1,20 @@
 <template>
   <view class="login" :style="{ marginTop: iStatusBarHeight + 'px'}">
-	
-  	<view class="login-form">
+		<view class="title">登录</view>
+  	<view class="login-form" >
 			<view class="form-item">
 				<input class="input" v-model="formLogin.account" maxlength="30" placeholder="账号" />
 			</view>
 			<view class="form-item">
 				<input class="input" v-model="formLogin.password" maxlength="30" placeholder="密码" password />
 			</view>
-			<button type="primary" @tap="login">登录</button>	
+			<button type="primary" @tap="login">确认</button>	
 		</view>
 		
+		<view class="welcome" v-if="isShowWelcome">
+			<image class="wel1" src="../../static/images/welcome1.png"></image>
+			<image class="wel2" src="../../static/images/welcome2.png"></image>
+		</view>
 		<text class="login-bottom-tip">十分感谢仓鼠团的大家。ありがと</text>		
 </view>
 </template>
@@ -24,6 +28,7 @@ export default{
 				password: ''
 			},
 			iStatusBarHeight: 0,
+			isShowWelcome: false,
 		}
 	},
 	onLoad() {
@@ -38,13 +43,25 @@ export default{
 			let parames = {
 				...this.formLogin
 			}
-			console.log(parames)
-			this.$http.login( parames )
+			this.$http.login(parames)
 			.then(({data}) => {
 				if (data.code == 0){
 					let token = data.data.token
 					//存储
+					console.log(data.data)
 					this.$store.state.user = data.data;
+					uni.setStorageSync('user', data.data);
+					this.isShowWelcome = true;
+					uni.setScreenBrightness({
+					  value: 0.5,
+						success: function () {
+								console.log('success');
+						}
+					});
+					setTimeout(()=>{
+						uni.navigateBack();
+					}, 2000)
+					//uni.navigateBack();
 					//util.saveStorage("token", token);
 					//util.saveStorage('user', data.data);
 					//this.show = false;
@@ -98,8 +115,16 @@ export default{
 	bottom: 0;
 	width: 750rpx;
 }
+.login .title{
+	margin: 20vh auto 0 auto;
+	height: 10vh;
+	width: 650rpx;
+	font-size: 3vh;
+	line-height: 10vh;
+	font-weight: bold;
+}
 .login .login-form{
-	margin: 20vh 50rpx 40vh 50rpx;
+	margin: 0 50rpx 30vh 50rpx;
 	width: 650rpx;
 	height: 30vh;
 }
@@ -118,5 +143,64 @@ export default{
 	width: 750rpx;
 	font-size: 25rpx;
 	text-align: center;
+}
+.login .welcome{
+	position: fixed;
+	z-index: 100;
+	top: 0;
+	width: 750rpx;
+	height: 100vh;
+}
+.login .welcome image{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 750rpx;
+	height: 100vh;
+	opacity: .5;
+	transform-origin: 50% 100%;
+	transform: translateX(-50%) translateY(-50%) rotateZ(0deg);
+}
+.login .wel1{
+	animation: loading1 2s linear 1;
+}
+.login .wel2{
+	animation: loading2 2s linear 1;
+}
+@keyframes loading1{
+  0%{
+    width: 750rpx;
+		height: 100vh;
+		transform: translateX(-50%) translateY(-50%) rotateZ(0deg);
+  }
+	50%{
+		width: 1000rpx;
+		height: 133vh;
+		opacity: 1;
+	  transform: translateX(-50%) translateY(-50%) rotateZ(0deg);
+	}
+  100%{
+		width: 1000rpx;
+		height: 133vh;
+    transform: translateX(-50%) translateY(-50%) rotateZ(-45deg);
+  }
+}
+@keyframes loading2{
+  0%{
+    width: 750rpx;
+  	height: 100vh;
+		transform: translateX(-50%) translateY(-50%) rotateZ(0deg);
+  }
+  50%{
+  	width: 1000rpx;
+  	height: 133vh;
+		opacity: 1;
+	  transform:translateX(-50%) translateY(-50%) rotateZ(0deg);
+	}
+  100%{
+		width: 1000rpx;
+		height: 133vh;
+    transform:translateX(-50%) translateY(-50%) rotateZ(45deg);
+  }
 }
 </style>
