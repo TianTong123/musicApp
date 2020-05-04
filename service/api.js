@@ -3,7 +3,7 @@ import api_login from "@/pages/login/api_login";
 import api_home from "@/pages/home/api_home.js";
 // import api_search from "@/views/search/api_search";
 import api_play from "@/pages/play/api_play";
-// import api_userInfo from "@/views/user/api_userInfo";
+import api_userInfo from "@/pages/user/api_userInfo";
 import api_rank from "@/pages/rank/api_rank";
 // import api_singer from "@/views/singer/api_singer";
 let baseUrl = 'devUrl';
@@ -57,7 +57,7 @@ api = Object.assign(
   api_home,
   // api_search,
   api_play,
-  // api_userInfo,
+  api_userInfo,
   api_rank,
   // api_singer,
 );

@@ -46,11 +46,11 @@ export default{
 			this.$http.login(parames)
 			.then(({data}) => {
 				if (data.code == 0){
-					let token = data.data.token
 					//存储
-					console.log(data.data)
 					this.$store.state.user = data.data;
 					uni.setStorageSync('user', data.data);
+					this.$store.state.token = data.data.token;
+					uni.setStorageSync('token', data.data.token);
 					this.isShowWelcome = true;
 					uni.setScreenBrightness({
 					  value: 0.5,
@@ -58,6 +58,7 @@ export default{
 								console.log('success');
 						}
 					});
+					this.getMusicFormList();
 					setTimeout(()=>{
 						uni.navigateBack();
 					}, 2000)
@@ -72,10 +73,24 @@ export default{
 					if(data.data.type == 1){ //歌手就跳转用户页
 						//router.push({name:'user'});
 					} 
-					//this.getMusicFormList();
+					
 				}
 				else{//this.$myMsg.notify({content: data.msg, type: 'error'})
 				}  
+			})
+		},
+		
+		//获取歌单
+		getMusicFormList(){
+			let parames = {
+				accountId: this.$store.state.user.id,
+			}
+			this.$http.getMusicFormList( parames )
+			.then(({data}) => {
+				if (data.code == 0){
+					uni.setStorageSync("musicFormList", data.data);
+				}
+				else{}  
 			})
 		},
 		

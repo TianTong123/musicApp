@@ -137,12 +137,12 @@ export const http = ({
     config.timeout = timeout;
   }
   
-  //let token = util.getStorage("token");
+ let token = uni.getStorageSync("token");
 
-  // if (token) {
-  //   // config.headers.uid = util.getStorage("user").account;
-  //   // config.headers.token = token;
-  // }
+  if (token) {
+    config.headers.uid = uni.getStorageSync("user").account;
+    config.headers.token = token;
+  }
 
   //get方法拼接参数
   method = method.toUpperCase();

@@ -14,11 +14,11 @@
 			:class="{'uni-drawer--right': rightMode,'uni-drawer--left': !rightMode, 'uni-drawer__content--visible': showDrawer}">
 			<view class="drawer-head">
 				<view class="user-head">
-					<image class="head-user-img" src="http://39.107.123.212:8848/tiantong/file/imgShow/2b99b1e9b0044f85976bff600fc93541.jpg" mode="widthFix"></image>
+					<image class="head-user-img" :src="$global.imgUrl+user.photoUrl" mode="widthFix"></image>
 				</view>
 				<view class="msg-box">
-					<text class="user-name">甜筒</text>
-					<text class="user-info">这是个爱吃甜筒的人</text>
+					<text class="user-name">{{user.accountName}}</text>
+					<text class="user-info">{{user.account}}</text>
 				</view>
 			</view>
 			<view class="list-wrap">
@@ -28,10 +28,10 @@
 					</navigator>
 				</view>
 				<view class="list-item">
-					<text class="list-text">用户注册</text>
+					<text class="list-text">用户注册(等死，完全没写)</text>
 				</view>
 				<view class="list-item">
-					<text class="list-text">退出登录</text>
+					<text class="list-text">退出登录(等死，完全没写)</text>
 				</view>
 			</view>
 		</view>
@@ -86,6 +86,18 @@ export default {
 			flag: true
 		}
 	},
+	computed:{
+		user:{
+			get(){
+				return this.$store.state.user || uni.getStorageSync('user');
+				
+			},
+			set(val){
+				this.$store.state.user = val;
+				uni.setStorageSync('user', val);
+			}
+		}
+	},
 	watch: {
 		visible(val) {
 			if (val) {
@@ -96,6 +108,7 @@ export default {
 		}
 	},
 	created() {
+		this.user = uni.getStorageSync('user');
 		this.visibleSync = this.visible
 		setTimeout(() => {
 			this.showDrawer = this.visible

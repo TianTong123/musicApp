@@ -202,7 +202,7 @@ export default {
 	}
 	.index .content .swiper-box{
 		background-color: #fff;
-		color: #aaa;
+		color: #000;
 	}
 	.index .content .swiper-box .swripe-item{
 		display: block;
