@@ -159,6 +159,15 @@
   background-size: 100%;
   background-repeat: no-repeat;
 }
+/* 歌单 */
+.icon-musicList{
+  width: auto;
+  height: auto;
+  display: inline-block;
+  background-image: url('./static/images/icon/musicList.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
 /* 歌 */
 .icon-music{
   width: auto;

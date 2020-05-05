@@ -143,7 +143,7 @@ export default {
 		width: 750rpx;
 		height: 100rpx;
 		justify-content: space-between;
-		background-color: #242424;
+		background-color: #00ACE9;
 	}
 	.index .top-bar .menu{
 		display: inline-block;
@@ -174,7 +174,7 @@ export default {
 		width: 500rpx;
 	}
 	.index .uni-tab-item-title {
-		color: #8A8B8C;
+		color: #fff;
 		font-size: 32rpx;
 		height: 100rpx;
 		line-height: 100rpx;
@@ -191,7 +191,6 @@ export default {
 	.index .top-bar .uni-tab-item-active .uni-tab-item-title{
 		font-size: 35rpx;
 		font-weight: bold;
-		color: #fff;
 	}
 	
 	.index .content{

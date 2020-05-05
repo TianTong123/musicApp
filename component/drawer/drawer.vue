@@ -14,7 +14,7 @@
 			:class="{'uni-drawer--right': rightMode,'uni-drawer--left': !rightMode, 'uni-drawer__content--visible': showDrawer}">
 			<view class="drawer-head">
 				<view class="user-head">
-					<image class="head-user-img" :src="$global.imgUrl+user.photoUrl" mode="widthFix"></image>
+					<image class="head-user-img" :src="$global.imgUrl+user.photoUrl" mode="heightFix"></image>
 				</view>
 				<view class="msg-box">
 					<text class="user-name">{{user.accountName}}</text>
@@ -176,7 +176,7 @@ export default {
 		width: 550rpx;
 		bottom: 0;
 		transition: transform 0.3s ease;
-		background-color: #242424;
+		background-color: #fff;
 	}
 
 	.uni-drawer--left {
@@ -219,7 +219,7 @@ export default {
 		top: 0rpx;
 		height: 35vh;
 		width: 100%;
-		background-color: #353535;
+		background-color: #00ACE9;
 	}
 	.drawer-head .user-head{
 		position: relative;
@@ -230,13 +230,11 @@ export default {
 		border-radius: 75rpx;
 		border: 1rpx solid #ccc;
 		overflow: hidden;
+		background-color: #fff;
 	}
 	.drawer-head .user-head .head-user-img{
-		position: absolute;
-		z-index: 3;
-		top: 50%;
-		transform: translateY(-50%);
-		width: 100%;
+		width: 150rpx;
+		height: 150rpx;
 	}
 	.msg-box{
 		margin: 10rpx 0 0 50rpx;
@@ -257,10 +255,10 @@ export default {
 		height: 85rpx;
 		margin: 0 50rpx;
 		line-height: 85rpx;
-		border-bottom: 1rpx solid #333;
+		border-bottom: 1rpx solid #eee;
 	}
 	.list-wrap .list-text{
 		font-size: 30rpx;
-		color: #aaa;
+		color: #000;
 	}
 </style>

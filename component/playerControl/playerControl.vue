@@ -10,7 +10,7 @@
 			<text class="singer">{{selectMusic.singer}}</text>
 		</view>
 		<view class="my-normal-btn menu-btn" @click="showPlayList">
-			<i class="icon-mini-menu"></i>
+			<i class="icon-musicList"></i>
 		</view>
 		
 		<!-- 播放列表 -->
@@ -158,8 +158,9 @@ export default {
 	bottom: 0;
 	height: 100rpx;
 	width: 750rpx;
-	background-color: #242424;
-	color: #fff;
+	border-top: 1rpx solid #eee;
+	background-color: #fff;
+	color: #000;
 	font-size: 20rpx;
 }
 .play-control-bar .play-btn{
@@ -176,7 +177,7 @@ export default {
 }
 .play-control-bar .music-info .music-name{
 	display: block;
-	color: #aaa;
+	color: #000;
 	font-size: 30rpx;
 	line-height: 60rpx;
 }
@@ -192,8 +193,9 @@ export default {
 	z-index: 20;
 	width: 750rpx;
 	height: 710rpx;
-	background-color: #242424;
-	border-bottom: 1rpx solid #333;
+	background-color: #fff;
+	border-radius: 40rpx 40rpx 0 0;
+	border-bottom: 1rpx solid #eee;
 	overflow: hidden;
 	transition-duration: .5s;
 }
@@ -210,14 +212,14 @@ export default {
 	display: block;
 	width: 750rpx;
 	height: 79rpx;
-	color: #aaa;
-	border-bottom: 1rpx solid #333;
-	background-color: #17181a;
+	color: #000;
+	border-bottom: 1rpx solid #eee;
+	background-color: #00ACE9;
 }
 .play-control-bar .play-list .play-list-head .play-list-title{
 	display: inline-block;
 	padding-left: 30rpx;
-	color: #aaa;
+	color: #fff;
 	line-height: 79rpx;
 	font-size: 30rpx;
 }
@@ -239,8 +241,8 @@ export default {
 	height: 79rpx;
 	font-size: 30rpx;
 	line-height: 80rpx;
-	border-bottom: 1rpx solid #333;
-	color: #aaa;
+	border-bottom: 1rpx solid #eee;
+	color: #000;
 }
 .play-control-bar .play-list-wrap .play-list-music-info .info-wrap{
 	float: left;
@@ -260,7 +262,10 @@ export default {
 	color: #666;
 }
 .play-control-bar .play-list-wrap .active{
-	color: #01e5ff;
-	background-color: #353535;
+	color: #fff;
+	background-color: rgba(0, 177, 233, .8);
+}
+.play-control-bar .play-list-wrap .active .singer{
+	color: #fff;
 }
 </style>
