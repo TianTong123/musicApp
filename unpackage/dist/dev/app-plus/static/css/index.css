@@ -1,0 +1,78 @@
+.index {
+		position: relative;
+		height: 100vh;
+		width: 750rpx;
+		overflow: hidden;
+	}
+	.index .top-bar{
+		position: fixed;
+		top: 0;
+		width: 750rpx;
+		height: 100rpx;
+		justify-content: space-between;
+		background-color: #00ACE9;
+	}
+	.index .top-bar .menu{
+		display: inline-block;
+		margin: 32.5rpx 40rpx;
+		width: 35rpx;
+		height: 35rpx;
+	}
+	.index .top-bar .nav {
+		display: inline-block;
+		width: 520rpx;
+		height: 100rpx;
+		flex-direction: row;
+		white-space: nowrap;
+	}
+	
+	.index .uni-tab-item {
+		display: inline-block;
+		flex-wrap: nowrap;
+		width: 100rpx;
+		padding: 0 14rpx;
+		margin: 0 20rpx;
+	}
+	
+	.index-drawer{
+		position: absolute;
+		left: 0rpx;
+		bottom: 0rpx;
+		width: 500rpx;
+	}
+	.index .uni-tab-item-title {
+		color: #fff;
+		font-size: 32rpx;
+		height: 100rpx;
+		line-height: 100rpx;
+		flex-wrap: nowrap;
+		white-space: nowrap;
+	}
+
+	.index .top-bar .uni-tab-item-active {
+		/* background-color: #c20c0c;
+		border-left: 1px solid #fff;
+		border-right: 1px solid #fff; */
+		
+	}
+	.index .top-bar .uni-tab-item-active .uni-tab-item-title{
+		font-size: 35rpx;
+		font-weight: bold;
+	}
+	
+	.index .content{
+		position: absolute;
+		top: 100rpx;
+		bottom: 100rpx;
+		width: 100%;
+	}
+	.index .content .swiper-box{
+		background-color: #fff;
+		color: #000;
+	}
+	.index .content .swiper-box .swripe-item{
+		display: block;
+		width: 100%;
+		height: auto;
+		overflow-y: auto;
+	}

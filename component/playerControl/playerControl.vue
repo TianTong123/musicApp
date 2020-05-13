@@ -49,9 +49,6 @@ export default {
 			test: '',
 		}
 	},
-	mounted(){
-		//this.$music.src = this.$global.musicUrl+'d570264198294d7fbe993cb018f7a80b.mp3'
-	},
 	computed:{
 		playList(){
 			let tempList = this.$store.state.playList;
@@ -66,6 +63,7 @@ export default {
 		activeIndex:{//当前播放列表下标
 			get() {
 				let index = this.$store.state.activeIndex;
+				console.log(index)
 				if( index != ''){
 					//this.select(this.playList[index], index);
 					return index
@@ -86,7 +84,7 @@ export default {
 		},
 		music:{
 			get(){
-				return this.$store.state.music
+				return this.$global.music
 			},
 			set(val){
 				this.$store.state.music = val
@@ -130,6 +128,8 @@ export default {
 			//let id = this.playList[this.activeIndex].musicId;
 			if(this.$music.src == null || this.$music == '')
 				return
+			
+			this.music = this.$music
 			this.$global.music = this.$music
 			
 			uni.navigateTo({

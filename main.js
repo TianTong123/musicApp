@@ -10,8 +10,6 @@ Vue.prototype.$http = api;
 Vue.prototype.$global = global;
 Vue.prototype.$store = store;
 Vue.prototype.$music =  uni.createInnerAudioContext(); //创建播放器对象
-var music = "556565"
-Vue.prototype.$test = 11111
 
 App.mpType = 'app'
 

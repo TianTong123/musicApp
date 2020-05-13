@@ -1,12 +1,12 @@
 <template>
 	<view class="user">
-		<text class="user-title">我的歌单</text>
-		<view class="music-form-wrap">
+		<text class="user-title" v-show="!isShowMusicForm">我的歌单</text>
+		<view class="music-form-wrap" v-show="!isShowMusicForm">
 			<view 
 				class="music-card-wrap" 
 				v-for="(item, index) in musicFormList" 
 				:key="index" 
-				@click="toMusicList(item.id)">
+				@click="showMusicForm(item.id)">
 				<view class="music-card-img-wrap">
 					<image class="music-card-img" :src="$global.imgUrl+item.posterUrl" mode="widthFix"></image>
 				</view>
@@ -14,14 +14,20 @@
 			</view>
 		</view>
 		
+		<music-form v-if="isShowMusicForm" :id="selcetId" @close="close"></music-form>
 	</view>
 </template>
 
 <script>
+import musicForm from './musicFormList.vue'
+	
 export default {
+	components:{ musicForm },
 	data() {
 		return {
 			musicFormList: [],
+			isShowMusicForm: false,
+			selcetId: 0,
 		}
 	},
 	mounted(){
@@ -29,59 +35,17 @@ export default {
 	},
 	methods: {
 		//跳转到歌单页
-		toMusicList(id){
-			uni.navigateTo({
-			  url: '../user/musicFormList?id=' + id
-			});
+		showMusicForm(id){
+			this.selcetId = id;
+			this.isShowMusicForm = true;
 		},
+		close(val){
+			this.isShowMusicForm = false;
+		}
 	}
 }
 </script>
 
 <style>
-.user{
-	
-}
-.user .user-title{
-	display: block;
-	height: 7vh;
-	width: 690rpx;
-	margin: 0 auto;
-	font-weight: bold;
-	border-bottom: 1rpx solid #eee;
-	line-height: 7vh;
-}
-.user .music-form-wrap{
-	display: block;
-	width: 690rpx;
-	margin: 0 auto;
-}
-.user .music-form-wrap .music-card-wrap{
-	position: relative;
-	height: 10vh;
-	width: 100%;
-	border-bottom: 1rpx solid #eee;
-}
-.user .music-form-wrap .music-card-img-wrap{
-	position: absolute;
-	top: 50%;
-	transform: translateY(-50%);
-	height: 90rpx;
-	width: 90rpx;
-	border-radius: 15rpx;
-	overflow: hidden;
-}
-.user .music-form-wrap .music-card-wrap .music-card-img{
-	position: absolute;
-	top: 50%;
-	transform: translateY(-50%);
-	height: 100%;
-	width: 100%;
-}
-.user .music-form-wrap .music-card-wrap .music-card-name{
-	position: absolute;
-	left: 120rpx;
-	line-height: 10vh;
-	font-size: 30rpx;
-}
+@import url("../../static/css/user.css");
 </style>

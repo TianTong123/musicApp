@@ -33,9 +33,7 @@
 			}
     },{
 			"path" : "pages/user/musicFormList",
-			"style" : {
-				"navigationBarTitleText":"歌单"
-			}
+			"style" : {"titleNView": false}
     }
     ],
 	"globalStyle": {

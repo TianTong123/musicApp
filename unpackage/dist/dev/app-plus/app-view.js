@@ -1346,67 +1346,48 @@ var render = function() {
     "v-uni-view",
     { staticClass: _vm._$g(0, "sc"), attrs: { _i: 0 } },
     [
-      _c(
-        "v-uni-swiper",
-        {
-          staticClass: _vm._$g(1, "sc"),
-          attrs: {
-            circular: true,
-            "indicator-dots": true,
-            autoplay: true,
-            interval: 5000,
-            duration: 500,
-            _i: 1
-          }
-        },
-        _vm._l(_vm._$g(2, "f"), function(e, index, $20, $30) {
-          return _c(
-            "v-uni-swiper-item",
-            { key: e, attrs: { _i: "2-" + $30 } },
-            [
-              _c(
-                "v-uni-view",
-                {
-                  staticClass: _vm._$g("3-" + $30, "sc"),
-                  attrs: { _i: "3-" + $30 }
-                },
-                [
-                  _c("v-uni-image", {
-                    staticClass: _vm._$g("4-" + $30, "sc"),
-                    attrs: {
-                      src: _vm._$g("4-" + $30, "a-src"),
-                      mode: "heightFix",
-                      _i: "4-" + $30
-                    }
-                  })
-                ],
-                1
-              )
-            ],
-            1
-          )
-        }),
-        1
-      ),
+      _c("bw-swiper", {
+        staticStyle: { width: "100%", margin: "40rpx 0" },
+        attrs: { _i: 1 }
+      }),
       _c(
         "v-uni-view",
-        { staticClass: _vm._$g(5, "sc"), attrs: { _i: 5 } },
+        { staticClass: _vm._$g(2, "sc"), attrs: { _i: 2 } },
         [
           _c(
             "v-uni-view",
-            { staticClass: _vm._$g(6, "sc"), attrs: { _i: 6 } },
-            [_c("v-uni-image", { attrs: { src: _vm._$g(7, "a-src"), _i: 7 } })],
+            { staticClass: _vm._$g(3, "sc"), attrs: { _i: 3 } },
+            [_c("v-uni-image", { attrs: { src: _vm._$g(4, "a-src"), _i: 4 } })],
             1
           ),
           _c(
             "v-uni-view",
-            { staticClass: _vm._$g(8, "sc"), attrs: { _i: 8 } },
+            { staticClass: _vm._$g(5, "sc"), attrs: { _i: 5 } },
             [
+              _c(
+                "v-uni-view",
+                { staticClass: _vm._$g(6, "sc"), attrs: { _i: 6 } },
+                [
+                  _vm._v("\n\t\t\t\t歌手\n\t\t\t\t"),
+                  _c(
+                    "v-uni-view",
+                    { staticClass: _vm._$g(7, "sc"), attrs: { _i: 7 } },
+                    [
+                      _c("i", {
+                        staticClass: _vm._$g(8, "sc"),
+                        attrs: { _i: 8 }
+                      })
+                    ],
+                    1
+                  )
+                ],
+                1
+              ),
               _c(
                 "v-uni-view",
                 { staticClass: _vm._$g(9, "sc"), attrs: { _i: 9 } },
                 [
-                  _vm._v("\n\t\t\t\t歌手\n\t\t\t\t"),
+                  _vm._v("\n\t\t\t\t排行榜\n\t\t\t\t"),
                   _c(
                     "v-uni-view",
                     { staticClass: _vm._$g(10, "sc"), attrs: { _i: 10 } },
@@ -1420,25 +1401,6 @@ var render = function() {
                   )
                 ],
                 1
-              ),
-              _c(
-                "v-uni-view",
-                { staticClass: _vm._$g(12, "sc"), attrs: { _i: 12 } },
-                [
-                  _vm._v("\n\t\t\t\t排行榜\n\t\t\t\t"),
-                  _c(
-                    "v-uni-view",
-                    { staticClass: _vm._$g(13, "sc"), attrs: { _i: 13 } },
-                    [
-                      _c("i", {
-                        staticClass: _vm._$g(14, "sc"),
-                        attrs: { _i: 14 }
-                      })
-                    ],
-                    1
-                  )
-                ],
-                1
               )
             ],
             1
@@ -1446,19 +1408,19 @@ var render = function() {
         ],
         1
       ),
-      _c("v-uni-text", { staticClass: _vm._$g(15, "sc"), attrs: { _i: 15 } }, [
+      _c("v-uni-text", { staticClass: _vm._$g(12, "sc"), attrs: { _i: 12 } }, [
         _vm._v("热门推荐")
       ]),
       _c(
         "v-uni-view",
-        { staticClass: _vm._$g(16, "sc"), attrs: { _i: 16 } },
-        _vm._l(_vm._$g(17, "f"), function(e, $11, $21, $31) {
+        { staticClass: _vm._$g(13, "sc"), attrs: { _i: 13 } },
+        _vm._l(_vm._$g(14, "f"), function(e, $10, $20, $30) {
           return _c(
             "v-uni-view",
             {
               key: e,
-              staticClass: _vm._$g("17-" + $31, "sc"),
-              attrs: { _i: "17-" + $31 },
+              staticClass: _vm._$g("14-" + $30, "sc"),
+              attrs: { _i: "14-" + $30 },
               on: {
                 click: function($event) {
                   return _vm.$handleViewEvent($event)
@@ -1469,31 +1431,31 @@ var render = function() {
               _c(
                 "v-uni-view",
                 {
-                  staticClass: _vm._$g("18-" + $31, "sc"),
-                  attrs: { _i: "18-" + $31 }
+                  staticClass: _vm._$g("15-" + $30, "sc"),
+                  attrs: { _i: "15-" + $30 }
                 },
                 [
                   _c(
                     "v-uni-view",
                     {
-                      staticClass: _vm._$g("19-" + $31, "sc"),
-                      attrs: { _i: "19-" + $31 }
+                      staticClass: _vm._$g("16-" + $30, "sc"),
+                      attrs: { _i: "16-" + $30 }
                     },
                     [
                       _c("i", {
-                        staticClass: _vm._$g("20-" + $31, "sc"),
-                        attrs: { _i: "20-" + $31 }
+                        staticClass: _vm._$g("17-" + $30, "sc"),
+                        attrs: { _i: "17-" + $30 }
                       }),
-                      _vm._v(_vm._$g("19-" + $31, "t1-0"))
+                      _vm._v(_vm._$g("16-" + $30, "t1-0"))
                     ],
                     1
                   ),
                   _c("v-uni-image", {
-                    staticClass: _vm._$g("21-" + $31, "sc"),
+                    staticClass: _vm._$g("18-" + $30, "sc"),
                     attrs: {
-                      src: _vm._$g("21-" + $31, "a-src"),
+                      src: _vm._$g("18-" + $30, "a-src"),
                       mode: "heightFix",
-                      _i: "21-" + $31
+                      _i: "18-" + $30
                     }
                   })
                 ],
@@ -1502,10 +1464,10 @@ var render = function() {
               _c(
                 "v-uni-view",
                 {
-                  staticClass: _vm._$g("22-" + $31, "sc"),
-                  attrs: { _i: "22-" + $31 }
+                  staticClass: _vm._$g("19-" + $30, "sc"),
+                  attrs: { _i: "19-" + $30 }
                 },
-                [_vm._v(_vm._$g("22-" + $31, "t0-0"))]
+                [_vm._v(_vm._$g("19-" + $30, "t0-0"))]
               )
             ],
             1
@@ -1547,8 +1509,8 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default =
-
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;
+var _bwSwiper = _interopRequireDefault(__webpack_require__(/*! @/component/bw-swiper/bw-swiper.vue */ 115));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}var _default =
 {
 
   data: function data() {
@@ -1556,7 +1518,8 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
       wxsProps: {} };
 
   },
-  components: {} };exports.default = _default;
+  components: {
+    'bwSwiper': _bwSwiper.default } };exports.default = _default;
 
 /***/ }),
 /* 24 */
@@ -1610,7 +1573,7 @@ exports = ___CSS_LOADER_API_IMPORT___(false);
 var ___CSS_LOADER_URL_REPLACEMENT_0___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_0___);
 var ___CSS_LOADER_URL_REPLACEMENT_1___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_1___);
 // Module
-exports.push([module.i, "\n.home .menu-bar{\r\n\tdisplay: -webkit-box;\r\n\tdisplay: -webkit-flex;\r\n\tdisplay: flex;\r\n\tz-index: 999;\r\n\tmargin:  0 30rpx;\r\n\theight: 300rpx;\r\n\twidth: 690rpx;\r\n\t-webkit-box-pack: center;\r\n\t-webkit-justify-content: center;\r\n\t        justify-content: center;\n}\n.home .menu-bar .menu-left-card{\r\n\tdisplay: inline-block;\r\n\tmargin-right: 10rpx;\r\n\twidth: 296rpx;\r\n\theight: 296rpx;\r\n\tborder-radius: 4rpx;\r\n\tborder: 2rpx solid #aaa;\n}\n.home .menu-bar .menu-left-card uni-image{\r\n\twidth: 296rpx;\r\n\theight: 296rpx;\r\n\toverflow: hidden;\n}\n.home .menu-bar .menu-right-card{\r\n\tdisplay: inline-block;\r\n\twidth: 380rpx;\r\n\theight: 300rpx;\n}\n.home .menu-bar .menu-card{\r\n\tdisplay: inline-block;\r\n\twidth: 380rpx;\r\n\theight: 141rpx;\r\n\tfont-size: 25rpx;\r\n\tline-height: 150rpx;\r\n\ttext-align: right;\r\n\tborder-radius: 4rpx;\r\n\tborder: 2rpx solid #aaa;\r\n\tbackground-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\n}\n.home .menu-bar .menu-card:nth-of-type(2){\r\n\tmargin-top: 11rpx;\r\n\tbackground-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_1___ + ");\n}\n.home .menu-bar .menu-btn{\r\n\tdisplay: inline-block;\r\n\tvertical-align: top;\r\n\tmargin: 27.5rpx 20rpx;\r\n\theight: 80rpx;\r\n\twidth: 80rpx;\r\n\tborder-radius: 50rpx;\r\n\toverflow: hidden;\r\n\tbackground-color: #3a3a3c;\n}\n.home .menu-bar .menu-btn i{\r\n\tmargin: 20rpx auto;\r\n\tdisplay: block;\r\n\theight: 40rpx;\r\n\twidth: 40rpx;\n}\n.home .home-swiper{\r\n\tdisplay: block;\r\n\tmargin: 40rpx auto;\r\n\twidth: 690rpx;\r\n\theight: 360rpx;\r\n\tborder-radius: 4rpx;\r\n\tborder: 2rpx solid #aaa;\r\n\toverflow: hidden;\n}\n.home .home-swiper .swipe-item-image{\r\n\twidth: 690rpx;\r\n\theight: 360rpx;\n}\n.home .uni-swiper-dot{\r\n\tbackground: #aaa;\n}\n.home .uni-swiper-dot-active{\r\n\tbackground-color: #c20c0c;\n}\n.home .big-title{\r\n\tdisplay: block;\r\n\tmargin: 15rpx 0;\r\n\tpadding-top: 20rpx;\r\n\tpadding-left: 25rpx;\r\n\twidth: 750rpx;\r\n\theight: 40rpx;\r\n\tline-height: 40rpx;\r\n\tfont-size: 35rpx;\r\n\tfont-weight: bold;\n}\n.home .card-wrap{\r\n\tdisplay: -webkit-box;\r\n\tdisplay: -webkit-flex;\r\n\tdisplay: flex;\r\n\t-webkit-box-pack: justify;\r\n\t-webkit-justify-content: space-between;\r\n\t        justify-content: space-between;\r\n\t-webkit-flex-wrap: wrap;\r\n\t        flex-wrap: wrap;\r\n\tjustify-content: space-between;\r\n\tmargin: 15rpx auto;\r\n\twidth: 690rpx;\r\n\theight: 700rpx;\n}\n.home .card-wrap .card{\r\n\tposition: relative;\r\n\twidth: 226rpx;\r\n\theight: 180rpx;\r\n\toverflow: hidden;\n}\n.home .card-wrap .card .card-img-wrap{\r\n\theight: 146rpx;\r\n\twidth: 222rpx;\r\n\tborder-radius: 4rpx;\r\n\tborder: 2rpx solid #aaa;\n}\n.home .card-wrap .card .card-img{\r\n\theight: 146rpx;\r\n\twidth: 222rpx;\r\n\toverflow: hidden;\n}\n.home .card-text-wrap{\r\n\tposition: absolute;\r\n\tdisplay: block;\r\n\tfont-size: 26rpx;\r\n\tline-height: 30rpx;\r\n\tword-break:normal; \r\n\twhite-space:nowrap;\n}\n.home .play-num-btn{\r\n\tposition: absolute;\r\n\tdisplay: block;\r\n\tz-index: 999;\r\n\ttop: 10rpx;\r\n\tright: 10rpx;\r\n\twidth: 100%;\r\n\theight: 25rpx;\r\n\ttext-align: right;\r\n\tfont-size: 20rpx;\r\n\tline-height: 25rpx;\r\n\tcolor: #fff;\n}\n.home .play-num-btn i{\r\n\tdisplay: inline-block;\r\n\tvertical-align: top;\r\n\tmargin-right: 10rpx;\r\n\twidth: 20rpx;\r\n\theight: 20rpx;\n}\n", ""]);
+exports.push([module.i, ".home .menu-bar{\r\n\tdisplay: -webkit-box;\r\n\tdisplay: -webkit-flex;\r\n\tdisplay: flex;\r\n\tz-index: 999;\r\n\tmargin:  0 30rpx;\r\n\theight: 300rpx;\r\n\twidth: 690rpx;\r\n\t-webkit-box-pack: center;\r\n\t-webkit-justify-content: center;\r\n\t        justify-content: center;\n}\n.home .menu-bar .menu-left-card{\r\n\tdisplay: inline-block;\r\n\tmargin-right: 10rpx;\r\n\twidth: 300rpx;\r\n\theight: 300rpx;\n}\n.home .menu-bar .menu-left-card uni-image{\r\n\twidth: 296rpx;\r\n\theight: 296rpx;\r\n\tborder-radius: 10rpx;\r\n\toverflow: hidden;\n}\n.home .menu-bar .menu-right-card{\r\n\tdisplay: inline-block;\r\n\twidth: 380rpx;\r\n\theight: 300rpx;\n}\n.home .menu-bar .menu-card{\r\n\tdisplay: inline-block;\r\n\twidth: 380rpx;\r\n\theight: 145rpx;\r\n\tfont-size: 25rpx;\r\n\tline-height: 150rpx;\r\n\ttext-align: right;\r\n\tborder-radius: 10rpx;\r\n\tbackground-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\n}\n.home .menu-bar .menu-card:nth-of-type(2){\r\n\tmargin-top: 11rpx;\r\n\tbackground-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_1___ + ");\n}\n.home .menu-bar .menu-btn{\r\n\tdisplay: inline-block;\r\n\tvertical-align: top;\r\n\tmargin: 27.5rpx 20rpx;\r\n\theight: 80rpx;\r\n\twidth: 80rpx;\r\n\tborder-radius: 50rpx;\r\n\toverflow: hidden;\r\n\tbackground-color: #3a3a3c;\n}\n.home .menu-bar .menu-btn i{\r\n\tmargin: 20rpx auto;\r\n\tdisplay: block;\r\n\theight: 40rpx;\r\n\twidth: 40rpx;\n}\n.home .big-title{\r\n\tdisplay: block;\r\n\tmargin: 15rpx 0;\r\n\tpadding-top: 20rpx;\r\n\tpadding-left: 25rpx;\r\n\twidth: 750rpx;\r\n\theight: 40rpx;\r\n\tline-height: 40rpx;\r\n\tfont-size: 35rpx;\r\n\tfont-weight: bold;\n}\n.home .card-wrap{\r\n\tdisplay: -webkit-box;\r\n\tdisplay: -webkit-flex;\r\n\tdisplay: flex;\r\n\t-webkit-box-pack: justify;\r\n\t-webkit-justify-content: space-between;\r\n\t        justify-content: space-between;\r\n\t-webkit-flex-wrap: wrap;\r\n\t        flex-wrap: wrap;\r\n\tjustify-content: space-between;\r\n\tmargin: 15rpx auto;\r\n\twidth: 690rpx;\r\n\theight: 700rpx;\n}\n.home .card-wrap .card{\r\n\tposition: relative;\r\n\twidth: 226rpx;\r\n\theight: 180rpx;\r\n\tborder-radius: 10rpx;\r\n\toverflow: hidden;\n}\n.home .card-wrap .card .card-img-wrap{\r\n\theight: 150rpx;\r\n\twidth: 222rpx;\r\n\tborder-radius: 4rpx;\n}\n.home .card-wrap .card .card-img{\r\n\theight: 150rpx;\r\n\twidth: 222rpx;\r\n\toverflow: hidden;\n}\n.home .card-text-wrap{\r\n\tposition: absolute;\r\n\tdisplay: block;\r\n\tfont-size: 26rpx;\r\n\tline-height: 30rpx;\r\n\tword-break:normal; \r\n\twhite-space:nowrap;\n}\n.home .play-num-btn{\r\n\tposition: absolute;\r\n\tdisplay: block;\r\n\tz-index: 999;\r\n\ttop: 10rpx;\r\n\tright: 10rpx;\r\n\twidth: 100%;\r\n\theight: 25rpx;\r\n\ttext-align: right;\r\n\tfont-size: 20rpx;\r\n\tline-height: 25rpx;\r\n\tcolor: #fff;\n}\n.home .play-num-btn i{\r\n\tdisplay: inline-block;\r\n\tvertical-align: top;\r\n\tmargin-right: 10rpx;\r\n\twidth: 20rpx;\r\n\theight: 20rpx;\n}\n", ""]);
 // Exports
 module.exports = exports;
 
@@ -2005,12 +1968,36 @@ var render = function() {
     "v-uni-view",
     { staticClass: _vm._$g(0, "sc"), attrs: { _i: 0 } },
     [
-      _c("v-uni-text", { staticClass: _vm._$g(1, "sc"), attrs: { _i: 1 } }, [
-        _vm._v("我的歌单")
-      ]),
+      _c(
+        "v-uni-text",
+        {
+          directives: [
+            {
+              name: "show",
+              rawName: "v-show",
+              value: _vm._$g(1, "v-show"),
+              expression: "_$g(1,'v-show')"
+            }
+          ],
+          staticClass: _vm._$g(1, "sc"),
+          attrs: { _i: 1 }
+        },
+        [_vm._v("我的歌单")]
+      ),
       _c(
         "v-uni-view",
-        { staticClass: _vm._$g(2, "sc"), attrs: { _i: 2 } },
+        {
+          directives: [
+            {
+              name: "show",
+              rawName: "v-show",
+              value: _vm._$g(2, "v-show"),
+              expression: "_$g(2,'v-show')"
+            }
+          ],
+          staticClass: _vm._$g(2, "sc"),
+          attrs: { _i: 2 }
+        },
         _vm._l(_vm._$g(3, "f"), function(item, index, $20, $30) {
           return _c(
             "v-uni-view",
@@ -2056,7 +2043,17 @@ var render = function() {
           )
         }),
         1
-      )
+      ),
+      _vm._$g(7, "i")
+        ? _c("music-form", {
+            attrs: { id: _vm._$g(7, "a-id"), _i: 7 },
+            on: {
+              close: function($event) {
+                return _vm.$handleViewEvent($event)
+              }
+            }
+          })
+        : _vm._e()
     ],
     1
   )
@@ -2091,8 +2088,8 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default =
-
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;
+var _musicFormList = _interopRequireDefault(__webpack_require__(/*! ./musicFormList.vue */ 83));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}var _default =
 {
 
   data: function data() {
@@ -2100,7 +2097,8 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
       wxsProps: {} };
 
   },
-  components: {} };exports.default = _default;
+  components: {
+    'musicForm': _musicFormList.default } };exports.default = _default;
 
 /***/ }),
 /* 45 */
@@ -2149,7 +2147,7 @@ if(false) {}
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../../Software/HBuilderX/plugins/uniapp-cli/node_modules/css-loader/dist/runtime/api.js */ 15);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, "\n.user{\n}\n.user .user-title{\r\n\tdisplay: block;\r\n\theight: 7vh;\r\n\twidth: 690rpx;\r\n\tmargin: 0 auto;\r\n\tfont-weight: bold;\r\n\tborder-bottom: 1rpx solid #eee;\r\n\tline-height: 7vh;\n}\n.user .music-form-wrap{\r\n\tdisplay: block;\r\n\twidth: 690rpx;\r\n\tmargin: 0 auto;\n}\n.user .music-form-wrap .music-card-wrap{\r\n\tposition: relative;\r\n\theight: 10vh;\r\n\twidth: 100%;\r\n\tborder-bottom: 1rpx solid #eee;\n}\n.user .music-form-wrap .music-card-img-wrap{\r\n\tposition: absolute;\r\n\ttop: 50%;\r\n\t-webkit-transform: translateY(-50%);\r\n\t        transform: translateY(-50%);\r\n\theight: 90rpx;\r\n\twidth: 90rpx;\r\n\tborder-radius: 15rpx;\r\n\toverflow: hidden;\n}\n.user .music-form-wrap .music-card-wrap .music-card-img{\r\n\tposition: absolute;\r\n\ttop: 50%;\r\n\t-webkit-transform: translateY(-50%);\r\n\t        transform: translateY(-50%);\r\n\theight: 100%;\r\n\twidth: 100%;\n}\n.user .music-form-wrap .music-card-wrap .music-card-name{\r\n\tposition: absolute;\r\n\tleft: 120rpx;\r\n\tline-height: 10vh;\r\n\tfont-size: 30rpx;\n}\n", ""]);
+exports.push([module.i, ".user{\n}\n.user .user-title{\r\n\tdisplay: block;\r\n\theight: 7vh;\r\n\twidth: 690rpx;\r\n\tmargin: 0 auto;\r\n\tfont-weight: bold;\r\n\tborder-bottom: 1rpx solid #eee;\r\n\tline-height: 7vh;\n}\n.user .music-form-wrap{\r\n\tdisplay: block;\r\n\twidth: 690rpx;\r\n\tmargin: 0 auto;\n}\n.user .music-form-wrap .music-card-wrap{\r\n\tposition: relative;\r\n\theight: 10vh;\r\n\twidth: 100%;\r\n\tborder-bottom: 1rpx solid #eee;\n}\n.user .music-form-wrap .music-card-img-wrap{\r\n\tposition: absolute;\r\n\ttop: 50%;\r\n\t-webkit-transform: translateY(-50%);\r\n\t        transform: translateY(-50%);\r\n\theight: 90rpx;\r\n\twidth: 90rpx;\r\n\tborder-radius: 15rpx;\r\n\toverflow: hidden;\n}\n.user .music-form-wrap .music-card-wrap .music-card-img{\r\n\tposition: absolute;\r\n\ttop: 50%;\r\n\t-webkit-transform: translateY(-50%);\r\n\t        transform: translateY(-50%);\r\n\theight: 100%;\r\n\twidth: 100%;\n}\n.user .music-form-wrap .music-card-wrap .music-card-name{\r\n\tposition: absolute;\r\n\tleft: 120rpx;\r\n\tline-height: 10vh;\r\n\tfont-size: 30rpx;\n}\n", ""]);
 // Exports
 module.exports = exports;
 
@@ -2586,7 +2584,7 @@ if(false) {}
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../../Software/HBuilderX/plugins/uniapp-cli/node_modules/css-loader/dist/runtime/api.js */ 15);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, "\n.index {\n\tposition: relative;\n\theight: 100vh;\n\twidth: 750rpx;\n\toverflow: hidden;\n}\n.index .top-bar{\n\tposition: fixed;\n\ttop: 0;\n\twidth: 750rpx;\n\theight: 100rpx;\n\t-webkit-box-pack: justify;\n\t-webkit-justify-content: space-between;\n\t        justify-content: space-between;\n\tbackground-color: #00ACE9;\n}\n.index .top-bar .menu{\n\tdisplay: inline-block;\n\tmargin: 32.5rpx 40rpx;\n\twidth: 35rpx;\n\theight: 35rpx;\n}\n.index .top-bar .nav {\n\tdisplay: inline-block;\n\twidth: 520rpx;\n\theight: 100rpx;\n\t-webkit-box-orient: horizontal;\n\t-webkit-box-direction: normal;\n\t-webkit-flex-direction: row;\n\t        flex-direction: row;\n\twhite-space: nowrap;\n}\n.index .uni-tab-item {\n\tdisplay: inline-block;\n\t-webkit-flex-wrap: nowrap;\n\t        flex-wrap: nowrap;\n\twidth: 100rpx;\n\tpadding: 0 14rpx;\n\tmargin: 0 20rpx;\n}\n.index-drawer{\n\tposition: absolute;\n\tleft: 0rpx;\n\tbottom: 0rpx;\n\twidth: 500rpx;\n}\n.index .uni-tab-item-title {\n\tcolor: #fff;\n\tfont-size: 32rpx;\n\theight: 100rpx;\n\tline-height: 100rpx;\n\t-webkit-flex-wrap: nowrap;\n\t        flex-wrap: nowrap;\n\twhite-space: nowrap;\n}\n.index .top-bar .uni-tab-item-active {\n\t/* background-color: #c20c0c;\n\tborder-left: 1px solid #fff;\n\tborder-right: 1px solid #fff; */\n}\n.index .top-bar .uni-tab-item-active .uni-tab-item-title{\n\tfont-size: 35rpx;\n\tfont-weight: bold;\n}\n.index .content{\n\tposition: absolute;\n\ttop: 100rpx;\n\tbottom: 100rpx;\n\twidth: 100%;\n}\n.index .content .swiper-box{\n\tbackground-color: #fff;\n\tcolor: #000;\n}\n.index .content .swiper-box .swripe-item{\n\tdisplay: block;\n\twidth: 100%;\n\theight: auto;\n\toverflow-y: auto;\n}\n", ""]);
+exports.push([module.i, ".index {\r\n\t\tposition: relative;\r\n\t\theight: 100vh;\r\n\t\twidth: 750rpx;\r\n\t\toverflow: hidden;\n}\n.index .top-bar{\r\n\t\tposition: fixed;\r\n\t\ttop: 0;\r\n\t\twidth: 750rpx;\r\n\t\theight: 100rpx;\r\n\t\t-webkit-box-pack: justify;\r\n\t\t-webkit-justify-content: space-between;\r\n\t\t        justify-content: space-between;\r\n\t\tbackground-color: #00ACE9;\n}\n.index .top-bar .menu{\r\n\t\tdisplay: inline-block;\r\n\t\tmargin: 32.5rpx 40rpx;\r\n\t\twidth: 35rpx;\r\n\t\theight: 35rpx;\n}\n.index .top-bar .nav {\r\n\t\tdisplay: inline-block;\r\n\t\twidth: 520rpx;\r\n\t\theight: 100rpx;\r\n\t\t-webkit-box-orient: horizontal;\r\n\t\t-webkit-box-direction: normal;\r\n\t\t-webkit-flex-direction: row;\r\n\t\t        flex-direction: row;\r\n\t\twhite-space: nowrap;\n}\n.index .uni-tab-item {\r\n\t\tdisplay: inline-block;\r\n\t\t-webkit-flex-wrap: nowrap;\r\n\t\t        flex-wrap: nowrap;\r\n\t\twidth: 100rpx;\r\n\t\tpadding: 0 14rpx;\r\n\t\tmargin: 0 20rpx;\n}\n.index-drawer{\r\n\t\tposition: absolute;\r\n\t\tleft: 0rpx;\r\n\t\tbottom: 0rpx;\r\n\t\twidth: 500rpx;\n}\n.index .uni-tab-item-title {\r\n\t\tcolor: #fff;\r\n\t\tfont-size: 32rpx;\r\n\t\theight: 100rpx;\r\n\t\tline-height: 100rpx;\r\n\t\t-webkit-flex-wrap: nowrap;\r\n\t\t        flex-wrap: nowrap;\r\n\t\twhite-space: nowrap;\n}\n.index .top-bar .uni-tab-item-active {\r\n\t\t/* background-color: #c20c0c;\r\n\t\tborder-left: 1px solid #fff;\r\n\t\tborder-right: 1px solid #fff; */\n}\n.index .top-bar .uni-tab-item-active .uni-tab-item-title{\r\n\t\tfont-size: 35rpx;\r\n\t\tfont-weight: bold;\n}\n.index .content{\r\n\t\tposition: absolute;\r\n\t\ttop: 100rpx;\r\n\t\tbottom: 100rpx;\r\n\t\twidth: 100%;\n}\n.index .content .swiper-box{\r\n\t\tbackground-color: #fff;\r\n\t\tcolor: #000;\n}\n.index .content .swiper-box .swripe-item{\r\n\t\tdisplay: block;\r\n\t\twidth: 100%;\r\n\t\theight: auto;\r\n\t\toverflow-y: auto;\n}\r\n", ""]);
 // Exports
 module.exports = exports;
 
@@ -3432,7 +3430,7 @@ if(false) {}
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../../Software/HBuilderX/plugins/uniapp-cli/node_modules/css-loader/dist/runtime/api.js */ 15);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, "\n.play{\r\n\tposition: relative;\r\n\twidth: 750rpx;\r\n\theight: 100vh;\n}\n.play .play-bg{\r\n\tposition: absolute;\r\n\ttop: 0;\r\n\tleft: 0;\r\n\twidth: 750rpx;\r\n\theight: 100vh;\r\n\toverflow: hidden;\n}\n.play .play-bg .bg-img{\r\n\tposition: absolute;\r\n\ttop: 50%;\r\n\tleft: 50%;\r\n\t-webkit-transform: translateX(-50%) translateY(-50%);\r\n\t        transform: translateX(-50%) translateY(-50%);\r\n\twidth: 800rpx;\r\n\theight: 120vh;\r\n\t-webkit-filter: blur(100px);\r\n\t        filter: blur(100px);\n}\n.play .play-head{\r\n\tposition: absolute;\r\n\tz-index: 20;\r\n\ttop: 0;\r\n\tleft: 0;\r\n\theight: 7.5vh;\r\n\twidth: 750rpx;\n}\n.play .title-btn{\r\n\tmargin: 2.25vh 3vh;\n}\n.play .singer{\r\n\tposition: absolute;\r\n\tdisplay: block;\r\n\tbottom: 0;\r\n\tleft: 120rpx;\r\n\theight: 4vh;\r\n\tline-height: 4vh;\r\n\tfont-size: 25rpx;\r\n\tcolor: #eee;\n}\n.play .play-poster{\r\n\tposition: absolute;\r\n\ttop: 7.5vh;\r\n\tbottom: 18.75vh;\r\n\twidth: 750rpx;\n}\n.play .play-poster .poster-wrap{\r\n\tposition: absolute;\r\n\ttop: 45%;\r\n\tleft: 50%;\r\n\tmargin-top: -225rpx;\r\n\tmargin-left: -225rpx;\r\n\theight: 450rpx;\r\n\twidth: 450rpx;\r\n\tborder: 10rpx solid rgba(238, 238, 238, .5);\r\n\tborder-radius: 225rpx;\r\n\toverflow: hidden;\r\n\t-webkit-animation: loading 26s linear infinite;\r\n\t        animation: loading 26s linear infinite;\n}\n.play .play-poster .poster-wrap-no-ani{\r\n\tposition: absolute;\r\n\ttop: 45%;\r\n\tleft: 50%;\r\n\tmargin-top: -225rpx;\r\n\tmargin-left: -225rpx;\r\n\theight: 450rpx;\r\n\twidth: 450rpx;\r\n\tborder: 10rpx solid rgba(238, 238, 238, .5);\r\n\tborder-radius: 225rpx;\r\n\toverflow: hidden;\n}\n.play .play-poster .poster-wrap .poster{\r\n\tposition: absolute;\r\n\ttop: 50%;\r\n\tleft: 50%;\r\n\t-webkit-transform: translateX(-50%) translateY(-50%);\r\n\t        transform: translateX(-50%) translateY(-50%);\r\n\theight: 100%;\n}\n.play .play-poster .btn-bar{\r\n\tposition: absolute;\r\n\tbottom: 0;\r\n\twidth: 750rpx;\r\n\theight: 7.5vh;\r\n\ttext-align: center;\n}\r\n/* 控制条 */\n.play .play-control-bar{\r\n\tposition: absolute;\r\n\tz-index: 9999;\r\n\tbottom: 0;\r\n\theight: 18.75vh;\r\n\twidth: 750rpx;\n}\n.play .play-control-bar .progress-bar{\r\n\tposition: absolute;\r\n\ttop: 0;\r\n\twidth: 750rpx;\r\n\theight: 6vh;\n}\n.play .progress-bar .progress-bg{\r\n\tmargin: 1.65vh auto;\r\n\twidth: 530rpx;\r\n\theight: 2.7vh;\n}\n.play .progress-bar .p-time{\r\n\tposition: absolute;\r\n\tmargin-top: .3vh;\r\n\ttop: 0;\r\n\twidth: ;\r\n\tfont-size: 20rpx;\r\n\tline-height: 6vh;\r\n\tcolor: #fff;\n}\r\n/* 下面按钮 */\n.play .play-btn-wrap{\r\n\tposition: absolute;\r\n\tdisplay: -webkit-box;\r\n\tdisplay: -webkit-flex;\r\n\tdisplay: flex;\r\n\ttop: 6vh;\r\n\twidth: 750rpx;\r\n\theight: 12.75vh;\r\n\t-webkit-box-pack: center;\r\n\t-webkit-justify-content: center;\r\n\t        justify-content: center;\n}\n.play .play-btn-wrap .play-btn{\r\n\tmargin: 0.75vh 100rpx;\r\n\theight: 100rpx;\r\n\twidth: 100rpx;\n}\n.play .play-btn-wrap .play-btn i{\r\n\tdisplay: inline-block;\r\n\twidth: 100rpx;\r\n\theight: 100rpx;\n}\n.play .play-btn-wrap .small-btn{\r\n\tmargin: 1.875vh 0;\r\n\theight: 70rpx;\r\n\twidth: 70rpx;\n}\n.play .play-btn-wrap .small-btn i{\r\n\tdisplay: inline-block;\r\n\twidth: 70rpx;\r\n\theight: 70rpx;\n}\r\n/* 歌词部分 */\n.play .lyric{\r\n\tposition: absolute;\r\n\ttop: 7.5vh;\r\n\tbottom: 25vh;\r\n\twidth: 750rpx;\r\n\toverflow-y: auto;\n}\n.play .lyric .lyric-wrap{\r\n\tposition: absolute;\r\n\ttop: 50%;\r\n\twidth: 750rpx;\r\n\tpadding-bottom: 80vh;\r\n\t-webkit-transition-duration: .3s;\r\n\t        transition-duration: .3s;\n}\n.play .lyric .lyric-wrap .text{\r\n\tdisplay: block;\r\n\tmargin: 30rpx auto;\r\n\twidth: 600rpx;\r\n\tfont-size: 30rpx;\r\n\ttext-align: center;\r\n\tline-height: 30rpx;\r\n\twhite-space: nowrap;\r\n\tcolor: #fff;\n}\n.play .lyric .lyric-wrap .active-line{\r\n\tcolor: #01e5ff;\r\n\tfont-size: 30rpx;\n}\n.play .play-list{\r\n\tposition: fixed;\r\n\tbottom: 0;\r\n\tz-index: 10000;\r\n\twidth: 750rpx;\r\n\theight: 710rpx;\r\n\tbackground-color: #242424;\r\n\tborder-bottom: 1rpx solid #333;\r\n\toverflow: hidden;\r\n\t-webkit-transition-duration: .5s;\r\n\t        transition-duration: .5s;\n}\n.play .play-list-bg{\r\n\tposition: fixed;\r\n\ttop: 0;\r\n\tleft: 0;\r\n\tz-index: 10;\r\n\theight: 100vh;\r\n\twidth: 750rpx;\r\n\tbackground-color: rgba(0,0,0,.6);\n}\n.play .play-list .play-list-head{\r\n\tdisplay: block;\r\n\twidth: 750rpx;\r\n\theight: 79rpx;\r\n\tcolor: #aaa;\r\n\tborder-bottom: 1rpx solid #333;\r\n\tbackground-color: #111214;\n}\n.play .play-list .play-list-head .play-list-title{\r\n\tdisplay: inline-block;\r\n\tpadding-left: 30rpx;\r\n\tcolor: #aaa;\r\n\tline-height: 79rpx;\r\n\tfont-size: 30rpx;\n}\n.play .play-list .play-list-head .play-list-btn{\r\n\tvertical-align: top;\r\n\tfloat: right;\r\n\tmargin: 20rpx 30rpx 20rpx 0;\n}\n.play .play-list .play-list-wrap{\r\n\twidth: 750rpx;\r\n\theight: 640rpx;\r\n\toverflow-x: hidden;\r\n\toverflow-y: auto;\n}\n.play .play-list-wrap .play-list-music-info{\r\n\tdisplay: block;\r\n\tpadding-left: 30rpx;\r\n\twidth: 720rpx;\r\n\theight: 79rpx;\r\n\tfont-size: 30rpx;\r\n\tline-height: 80rpx;\r\n\tborder-bottom: 1rpx solid #333;\r\n\tcolor: #aaa;\n}\n.play .play-list-wrap .play-list-music-info .info-wrap{\r\n\tfloat: left;\r\n\twidth: 600rpx;\r\n\theight: 80rpx;\r\n\toverflow: hidden;\r\n\twhite-space:nowrap;\r\n\ttext-overflow:ellipsis;\n}\n.play .play-list-wrap .play-list-music-info .time{\r\n\tfloat: right;\r\n\tmargin-right: 30rpx;\n}\n.play .play-list-wrap .play-list-music-info .play-list-singer{\r\n\tmargin-left: 10rpx;\r\n\tfont-size: 20rpx;\r\n\tcolor: #666;\n}\n.play .play-list-wrap .active{\r\n\tcolor: #01e5ff;\r\n\tbackground-color: #353535;\n}\n@-webkit-keyframes loading{\n0%{\r\n    -webkit-transform: rotateZ(0deg);\r\n            transform: rotateZ(0deg);\n}\n100%{\r\n    -webkit-transform: rotateZ(360deg);\r\n            transform: rotateZ(360deg);\n}\n}\n@keyframes loading{\n0%{\r\n    -webkit-transform: rotateZ(0deg);\r\n            transform: rotateZ(0deg);\n}\n100%{\r\n    -webkit-transform: rotateZ(360deg);\r\n            transform: rotateZ(360deg);\n}\n}\n", ""]);
+exports.push([module.i, ".play{\r\n\tposition: relative;\r\n\twidth: 750rpx;\r\n\theight: 100vh;\n}\n.play .play-bg{\r\n\tposition: absolute;\r\n\ttop: 0;\r\n\tleft: 0;\r\n\twidth: 750rpx;\r\n\theight: 100vh;\r\n\toverflow: hidden;\n}\n.play .play-bg .bg-img{\r\n\tposition: absolute;\r\n\ttop: 50%;\r\n\tleft: 50%;\r\n\t-webkit-transform: translateX(-50%) translateY(-50%);\r\n\t        transform: translateX(-50%) translateY(-50%);\r\n\twidth: 800rpx;\r\n\theight: 120vh;\r\n\t-webkit-filter: blur(100px);\r\n\t        filter: blur(100px);\n}\n.play .play-head{\r\n\tposition: absolute;\r\n\tz-index: 20;\r\n\ttop: 0;\r\n\tleft: 0;\r\n\theight: 7.5vh;\r\n\twidth: 750rpx;\n}\n.play .title-btn{\r\n\tmargin: 2.25vh 3vh;\n}\n.play .singer{\r\n\tposition: absolute;\r\n\tdisplay: block;\r\n\tbottom: 0;\r\n\tleft: 120rpx;\r\n\theight: 4vh;\r\n\tline-height: 4vh;\r\n\tfont-size: 25rpx;\r\n\tcolor: #eee;\n}\n.play .play-poster{\r\n\tposition: absolute;\r\n\ttop: 7.5vh;\r\n\tbottom: 18.75vh;\r\n\twidth: 750rpx;\n}\n.play .play-poster .poster-wrap{\r\n\tposition: absolute;\r\n\ttop: 45%;\r\n\tleft: 50%;\r\n\tmargin-top: -225rpx;\r\n\tmargin-left: -225rpx;\r\n\theight: 450rpx;\r\n\twidth: 450rpx;\r\n\tborder: 10rpx solid rgba(238, 238, 238, .5);\r\n\tborder-radius: 225rpx;\r\n\toverflow: hidden;\r\n\t-webkit-animation: loading 26s linear infinite;\r\n\t        animation: loading 26s linear infinite;\n}\n.play .play-poster .poster-wrap-no-ani{\r\n\tposition: absolute;\r\n\ttop: 45%;\r\n\tleft: 50%;\r\n\tmargin-top: -225rpx;\r\n\tmargin-left: -225rpx;\r\n\theight: 450rpx;\r\n\twidth: 450rpx;\r\n\tborder: 10rpx solid rgba(238, 238, 238, .5);\r\n\tborder-radius: 225rpx;\r\n\toverflow: hidden;\n}\n.play .play-poster .poster-wrap .poster{\r\n\tposition: absolute;\r\n\ttop: 50%;\r\n\tleft: 50%;\r\n\t-webkit-transform: translateX(-50%) translateY(-50%);\r\n\t        transform: translateX(-50%) translateY(-50%);\r\n\theight: 100%;\n}\n.play .play-poster .btn-bar{\r\n\tposition: absolute;\r\n\tbottom: 0;\r\n\twidth: 750rpx;\r\n\theight: 7.5vh;\r\n\ttext-align: center;\n}\r\n/* 控制条 */\n.play .play-control-bar{\r\n\tposition: absolute;\r\n\tz-index: 9999;\r\n\tbottom: 0;\r\n\theight: 18.75vh;\r\n\twidth: 750rpx;\n}\n.play .play-control-bar .progress-bar{\r\n\tposition: absolute;\r\n\ttop: 0;\r\n\twidth: 750rpx;\r\n\theight: 6vh;\n}\n.play .progress-bar .progress-bg{\r\n\tmargin: 1.65vh auto;\r\n\twidth: 530rpx;\r\n\theight: 2.7vh;\n}\n.play .progress-bar .p-time{\r\n\tposition: absolute;\r\n\tmargin-top: .3vh;\r\n\ttop: 0;\r\n\twidth: ;\r\n\tfont-size: 20rpx;\r\n\tline-height: 6vh;\r\n\tcolor: #fff;\n}\r\n/* 下面按钮 */\n.play .play-btn-wrap{\r\n\tposition: absolute;\r\n\tdisplay: -webkit-box;\r\n\tdisplay: -webkit-flex;\r\n\tdisplay: flex;\r\n\ttop: 6vh;\r\n\twidth: 750rpx;\r\n\theight: 12.75vh;\r\n\t-webkit-box-pack: center;\r\n\t-webkit-justify-content: center;\r\n\t        justify-content: center;\n}\n.play .play-btn-wrap .play-btn{\r\n\tmargin: 0.75vh 100rpx;\r\n\theight: 100rpx;\r\n\twidth: 100rpx;\n}\n.play .play-btn-wrap .play-btn i{\r\n\tdisplay: inline-block;\r\n\twidth: 100rpx;\r\n\theight: 100rpx;\n}\n.play .play-btn-wrap .small-btn{\r\n\tmargin: 1.875vh 0;\r\n\theight: 70rpx;\r\n\twidth: 70rpx;\n}\n.play .play-btn-wrap .small-btn i{\r\n\tdisplay: inline-block;\r\n\twidth: 70rpx;\r\n\theight: 70rpx;\n}\r\n/* 歌词部分 */\n.play .lyric{\r\n\tposition: absolute;\r\n\ttop: 7.5vh;\r\n\tbottom: 25vh;\r\n\twidth: 750rpx;\r\n\toverflow-y: auto;\n}\n.play .lyric .lyric-wrap{\r\n\tposition: absolute;\r\n\ttop: 50%;\r\n\twidth: 750rpx;\r\n\tpadding-bottom: 80vh;\r\n\t-webkit-transition-duration: .3s;\r\n\t        transition-duration: .3s;\n}\n.play .lyric .lyric-wrap .text{\r\n\tdisplay: block;\r\n\tmargin: 30rpx auto;\r\n\twidth: 600rpx;\r\n\tfont-size: 30rpx;\r\n\ttext-align: center;\r\n\tline-height: 30rpx;\r\n\twhite-space: nowrap;\r\n\tcolor: #fff;\n}\n.play .lyric .lyric-wrap .active-line{\r\n\tcolor: #01e5ff;\r\n\tfont-size: 30rpx;\n}\n.play .play-list{\r\n\tposition: fixed;\r\n\tbottom: 0;\r\n\tz-index: 10000;\r\n\twidth: 750rpx;\r\n\theight: 710rpx;\r\n\tbackground-color: #242424;\r\n\tborder-bottom: 1rpx solid #333;\r\n\toverflow: hidden;\r\n\t-webkit-transition-duration: .5s;\r\n\t        transition-duration: .5s;\n}\n.play .play-list-bg{\r\n\tposition: fixed;\r\n\ttop: 0;\r\n\tleft: 0;\r\n\tz-index: 10;\r\n\theight: 100vh;\r\n\twidth: 750rpx;\r\n\tbackground-color: rgba(0,0,0,.6);\n}\n.play .play-list .play-list-head{\r\n\tdisplay: block;\r\n\twidth: 750rpx;\r\n\theight: 79rpx;\r\n\tcolor: #aaa;\r\n\tborder-bottom: 1rpx solid #333;\r\n\tbackground-color: #111214;\n}\n.play .play-list .play-list-head .play-list-title{\r\n\tdisplay: inline-block;\r\n\tpadding-left: 30rpx;\r\n\tcolor: #aaa;\r\n\tline-height: 79rpx;\r\n\tfont-size: 30rpx;\n}\n.play .play-list .play-list-head .play-list-btn{\r\n\tvertical-align: top;\r\n\tfloat: right;\r\n\tmargin: 20rpx 30rpx 20rpx 0;\n}\n.play .play-list .play-list-wrap{\r\n\twidth: 750rpx;\r\n\theight: 640rpx;\r\n\toverflow-x: hidden;\r\n\toverflow-y: auto;\n}\n.play .play-list-wrap .play-list-music-info{\r\n\tdisplay: block;\r\n\tpadding-left: 30rpx;\r\n\twidth: 720rpx;\r\n\theight: 79rpx;\r\n\tfont-size: 30rpx;\r\n\tline-height: 80rpx;\r\n\tborder-bottom: 1rpx solid #333;\r\n\tcolor: #aaa;\n}\n.play .play-list-wrap .play-list-music-info .info-wrap{\r\n\tfloat: left;\r\n\twidth: 600rpx;\r\n\theight: 80rpx;\r\n\toverflow: hidden;\r\n\twhite-space:nowrap;\r\n\ttext-overflow:ellipsis;\n}\n.play .play-list-wrap .play-list-music-info .time{\r\n\tfloat: right;\r\n\tmargin-right: 30rpx;\n}\n.play .play-list-wrap .play-list-music-info .play-list-singer{\r\n\tmargin-left: 10rpx;\r\n\tfont-size: 20rpx;\r\n\tcolor: #666;\n}\n.play .play-list-wrap .active{\r\n\tcolor: #01e5ff;\r\n\tbackground-color: #353535;\n}\n@-webkit-keyframes loading{\n0%{\r\n    -webkit-transform: rotateZ(0deg);\r\n            transform: rotateZ(0deg);\n}\n100%{\r\n    -webkit-transform: rotateZ(360deg);\r\n            transform: rotateZ(360deg);\n}\n}\n@keyframes loading{\n0%{\r\n    -webkit-transform: rotateZ(0deg);\r\n            transform: rotateZ(0deg);\n}\n100%{\r\n    -webkit-transform: rotateZ(360deg);\r\n            transform: rotateZ(360deg);\n}\n}\n", ""]);
 // Exports
 module.exports = exports;
 
@@ -3696,7 +3694,7 @@ if(false) {}
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../../Software/HBuilderX/plugins/uniapp-cli/node_modules/css-loader/dist/runtime/api.js */ 15);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, "\n.login{\r\n\tposition: absolute;\r\n\ttop: 0;\r\n\tbottom: 0;\r\n\twidth: 750rpx;\n}\n.login .title{\r\n\tmargin: 20vh auto 0 auto;\r\n\theight: 10vh;\r\n\twidth: 650rpx;\r\n\tfont-size: 3vh;\r\n\tline-height: 10vh;\r\n\tfont-weight: bold;\n}\n.login .login-form{\r\n\tmargin: 0 50rpx 30vh 50rpx;\r\n\twidth: 650rpx;\r\n\theight: 30vh;\n}\n.login .login-form .form-item{\r\n\tmargin-bottom: 3vh;\r\n\twidth: 650rpx;\r\n\theight: 8vh;\r\n\tborder-bottom: 2rpx solid #242424;\n}\n.login .login-form .form-item .input{\r\n\twidth: 650rpx;\r\n\theight: 8vh;\n}\n.login  .login-bottom-tip{\r\n\tdisplay: block;\r\n\twidth: 750rpx;\r\n\tfont-size: 25rpx;\r\n\ttext-align: center;\n}\n.login .welcome{\r\n\tposition: fixed;\r\n\tz-index: 100;\r\n\ttop: 0;\r\n\twidth: 750rpx;\r\n\theight: 100vh;\n}\n.login .welcome uni-image{\r\n\tposition: absolute;\r\n\ttop: 50%;\r\n\tleft: 50%;\r\n\twidth: 750rpx;\r\n\theight: 100vh;\r\n\topacity: .5;\r\n\t-webkit-transform-origin: 50% 100%;\r\n\t        transform-origin: 50% 100%;\r\n\t-webkit-transform: translateX(-50%) translateY(-50%) rotateZ(0deg);\r\n\t        transform: translateX(-50%) translateY(-50%) rotateZ(0deg);\n}\n.login .wel1{\r\n\t-webkit-animation: loading1 2s linear 1;\r\n\t        animation: loading1 2s linear 1;\n}\n.login .wel2{\r\n\t-webkit-animation: loading2 2s linear 1;\r\n\t        animation: loading2 2s linear 1;\n}\n@-webkit-keyframes loading1{\n0%{\r\n    width: 750rpx;\r\n\t\theight: 100vh;\r\n\t\t-webkit-transform: translateX(-50%) translateY(-50%) rotateZ(0deg);\r\n\t\t        transform: translateX(-50%) translateY(-50%) rotateZ(0deg);\n}\n50%{\r\n\t\twidth: 1000rpx;\r\n\t\theight: 133vh;\r\n\t\topacity: 1;\r\n\t  -webkit-transform: translateX(-50%) translateY(-50%) rotateZ(0deg);\r\n\t          transform: translateX(-50%) translateY(-50%) rotateZ(0deg);\n}\n100%{\r\n\t\twidth: 1000rpx;\r\n\t\theight: 133vh;\r\n    -webkit-transform: translateX(-50%) translateY(-50%) rotateZ(-45deg);\r\n            transform: translateX(-50%) translateY(-50%) rotateZ(-45deg);\n}\n}\n@keyframes loading1{\n0%{\r\n    width: 750rpx;\r\n\t\theight: 100vh;\r\n\t\t-webkit-transform: translateX(-50%) translateY(-50%) rotateZ(0deg);\r\n\t\t        transform: translateX(-50%) translateY(-50%) rotateZ(0deg);\n}\n50%{\r\n\t\twidth: 1000rpx;\r\n\t\theight: 133vh;\r\n\t\topacity: 1;\r\n\t  -webkit-transform: translateX(-50%) translateY(-50%) rotateZ(0deg);\r\n\t          transform: translateX(-50%) translateY(-50%) rotateZ(0deg);\n}\n100%{\r\n\t\twidth: 1000rpx;\r\n\t\theight: 133vh;\r\n    -webkit-transform: translateX(-50%) translateY(-50%) rotateZ(-45deg);\r\n            transform: translateX(-50%) translateY(-50%) rotateZ(-45deg);\n}\n}\n@-webkit-keyframes loading2{\n0%{\r\n    width: 750rpx;\r\n  \theight: 100vh;\r\n\t\t-webkit-transform: translateX(-50%) translateY(-50%) rotateZ(0deg);\r\n\t\t        transform: translateX(-50%) translateY(-50%) rotateZ(0deg);\n}\n50%{\r\n  \twidth: 1000rpx;\r\n  \theight: 133vh;\r\n\t\topacity: 1;\r\n\t  -webkit-transform:translateX(-50%) translateY(-50%) rotateZ(0deg);\r\n\t          transform:translateX(-50%) translateY(-50%) rotateZ(0deg);\n}\n100%{\r\n\t\twidth: 1000rpx;\r\n\t\theight: 133vh;\r\n    -webkit-transform:translateX(-50%) translateY(-50%) rotateZ(45deg);\r\n            transform:translateX(-50%) translateY(-50%) rotateZ(45deg);\n}\n}\n@keyframes loading2{\n0%{\r\n    width: 750rpx;\r\n  \theight: 100vh;\r\n\t\t-webkit-transform: translateX(-50%) translateY(-50%) rotateZ(0deg);\r\n\t\t        transform: translateX(-50%) translateY(-50%) rotateZ(0deg);\n}\n50%{\r\n  \twidth: 1000rpx;\r\n  \theight: 133vh;\r\n\t\topacity: 1;\r\n\t  -webkit-transform:translateX(-50%) translateY(-50%) rotateZ(0deg);\r\n\t          transform:translateX(-50%) translateY(-50%) rotateZ(0deg);\n}\n100%{\r\n\t\twidth: 1000rpx;\r\n\t\theight: 133vh;\r\n    -webkit-transform:translateX(-50%) translateY(-50%) rotateZ(45deg);\r\n            transform:translateX(-50%) translateY(-50%) rotateZ(45deg);\n}\n}\r\n", ""]);
+exports.push([module.i, ".login{\r\n\tposition: absolute;\r\n\ttop: 0;\r\n\tbottom: 0;\r\n\twidth: 750rpx;\n}\n.login .title{\r\n\tmargin: 20vh auto 0 auto;\r\n\theight: 10vh;\r\n\twidth: 650rpx;\r\n\tfont-size: 3vh;\r\n\tline-height: 10vh;\r\n\tfont-weight: bold;\n}\n.login .login-form{\r\n\tmargin: 0 50rpx 30vh 50rpx;\r\n\twidth: 650rpx;\r\n\theight: 30vh;\n}\n.login .login-form .form-item{\r\n\tmargin-bottom: 3vh;\r\n\twidth: 650rpx;\r\n\theight: 8vh;\r\n\tborder-bottom: 2rpx solid #242424;\n}\n.login .login-form .form-item .input{\r\n\twidth: 650rpx;\r\n\theight: 8vh;\n}\n.login  .login-bottom-tip{\r\n\tdisplay: block;\r\n\twidth: 750rpx;\r\n\tfont-size: 25rpx;\r\n\ttext-align: center;\n}\n.login .welcome{\r\n\tposition: fixed;\r\n\tz-index: 100;\r\n\ttop: 0;\r\n\twidth: 750rpx;\r\n\theight: 100vh;\n}\n.login .welcome uni-image{\r\n\tposition: absolute;\r\n\ttop: 50%;\r\n\tleft: 50%;\r\n\twidth: 750rpx;\r\n\theight: 100vh;\r\n\topacity: .5;\r\n\t-webkit-transform-origin: 50% 100%;\r\n\t        transform-origin: 50% 100%;\r\n\t-webkit-transform: translateX(-50%) translateY(-50%) rotateZ(0deg);\r\n\t        transform: translateX(-50%) translateY(-50%) rotateZ(0deg);\n}\n.login .wel1{\r\n\t-webkit-animation: loading1 2s linear 1;\r\n\t        animation: loading1 2s linear 1;\n}\n.login .wel2{\r\n\t-webkit-animation: loading2 2s linear 1;\r\n\t        animation: loading2 2s linear 1;\n}\n@-webkit-keyframes loading1{\n0%{\r\n    width: 750rpx;\r\n\t\theight: 100vh;\r\n\t\t-webkit-transform: translateX(-50%) translateY(-50%) rotateZ(0deg);\r\n\t\t        transform: translateX(-50%) translateY(-50%) rotateZ(0deg);\n}\n50%{\r\n\t\twidth: 1000rpx;\r\n\t\theight: 133vh;\r\n\t\topacity: 1;\r\n\t  -webkit-transform: translateX(-50%) translateY(-50%) rotateZ(0deg);\r\n\t          transform: translateX(-50%) translateY(-50%) rotateZ(0deg);\n}\n100%{\r\n\t\twidth: 1000rpx;\r\n\t\theight: 133vh;\r\n    -webkit-transform: translateX(-50%) translateY(-50%) rotateZ(-45deg);\r\n            transform: translateX(-50%) translateY(-50%) rotateZ(-45deg);\n}\n}\n@keyframes loading1{\n0%{\r\n    width: 750rpx;\r\n\t\theight: 100vh;\r\n\t\t-webkit-transform: translateX(-50%) translateY(-50%) rotateZ(0deg);\r\n\t\t        transform: translateX(-50%) translateY(-50%) rotateZ(0deg);\n}\n50%{\r\n\t\twidth: 1000rpx;\r\n\t\theight: 133vh;\r\n\t\topacity: 1;\r\n\t  -webkit-transform: translateX(-50%) translateY(-50%) rotateZ(0deg);\r\n\t          transform: translateX(-50%) translateY(-50%) rotateZ(0deg);\n}\n100%{\r\n\t\twidth: 1000rpx;\r\n\t\theight: 133vh;\r\n    -webkit-transform: translateX(-50%) translateY(-50%) rotateZ(-45deg);\r\n            transform: translateX(-50%) translateY(-50%) rotateZ(-45deg);\n}\n}\n@-webkit-keyframes loading2{\n0%{\r\n    width: 750rpx;\r\n  \theight: 100vh;\r\n\t\t-webkit-transform: translateX(-50%) translateY(-50%) rotateZ(0deg);\r\n\t\t        transform: translateX(-50%) translateY(-50%) rotateZ(0deg);\n}\n50%{\r\n  \twidth: 1000rpx;\r\n  \theight: 133vh;\r\n\t\topacity: 1;\r\n\t  -webkit-transform:translateX(-50%) translateY(-50%) rotateZ(0deg);\r\n\t          transform:translateX(-50%) translateY(-50%) rotateZ(0deg);\n}\n100%{\r\n\t\twidth: 1000rpx;\r\n\t\theight: 133vh;\r\n    -webkit-transform:translateX(-50%) translateY(-50%) rotateZ(45deg);\r\n            transform:translateX(-50%) translateY(-50%) rotateZ(45deg);\n}\n}\n@keyframes loading2{\n0%{\r\n    width: 750rpx;\r\n  \theight: 100vh;\r\n\t\t-webkit-transform: translateX(-50%) translateY(-50%) rotateZ(0deg);\r\n\t\t        transform: translateX(-50%) translateY(-50%) rotateZ(0deg);\n}\n50%{\r\n  \twidth: 1000rpx;\r\n  \theight: 133vh;\r\n\t\topacity: 1;\r\n\t  -webkit-transform:translateX(-50%) translateY(-50%) rotateZ(0deg);\r\n\t          transform:translateX(-50%) translateY(-50%) rotateZ(0deg);\n}\n100%{\r\n\t\twidth: 1000rpx;\r\n\t\theight: 133vh;\r\n    -webkit-transform:translateX(-50%) translateY(-50%) rotateZ(45deg);\r\n            transform:translateX(-50%) translateY(-50%) rotateZ(45deg);\n}\n}\r\n", ""]);
 // Exports
 module.exports = exports;
 
@@ -3789,32 +3787,46 @@ var render = function() {
         "v-uni-view",
         { staticClass: _vm._$g(1, "sc"), attrs: { _i: 1 } },
         [
+          _c(
+            "v-uni-view",
+            {
+              staticClass: _vm._$g(2, "sc"),
+              attrs: { _i: 2 },
+              on: {
+                click: function($event) {
+                  return _vm.$handleViewEvent($event)
+                }
+              }
+            },
+            [_c("i", { staticClass: _vm._$g(3, "sc"), attrs: { _i: 3 } })],
+            1
+          ),
           _c("v-uni-image", {
-            staticClass: _vm._$g(2, "sc"),
-            attrs: { src: _vm._$g(2, "a-src"), mode: "widthFix", _i: 2 }
+            staticClass: _vm._$g(4, "sc"),
+            attrs: { src: _vm._$g(4, "a-src"), mode: "widthFix", _i: 4 }
           }),
           _c(
             "v-uni-text",
-            { staticClass: _vm._$g(3, "sc"), attrs: { _i: 3 } },
-            [_vm._v(_vm._$g(3, "t0-0"))]
+            { staticClass: _vm._$g(5, "sc"), attrs: { _i: 5 } },
+            [_vm._v(_vm._$g(5, "t0-0"))]
           )
         ],
         1
       ),
       _c(
         "v-uni-view",
-        { staticClass: _vm._$g(4, "sc"), attrs: { _i: 4 } },
+        { staticClass: _vm._$g(6, "sc"), attrs: { _i: 6 } },
         [
           _c(
             "v-uni-view",
-            { staticClass: _vm._$g(5, "sc"), attrs: { _i: 5 } },
-            _vm._l(_vm._$g(6, "f"), function(e, index, $20, $30) {
+            { staticClass: _vm._$g(7, "sc"), attrs: { _i: 7 } },
+            _vm._l(_vm._$g(8, "f"), function(e, index, $20, $30) {
               return _c(
                 "v-uni-view",
                 {
                   key: e,
-                  staticClass: _vm._$g("6-" + $30, "sc"),
-                  attrs: { _i: "6-" + $30 },
+                  staticClass: _vm._$g("8-" + $30, "sc"),
+                  attrs: { _i: "8-" + $30 },
                   on: {
                     click: function($event) {
                       return _vm.$handleViewEvent($event)
@@ -3825,29 +3837,29 @@ var render = function() {
                   _c(
                     "v-uni-view",
                     {
-                      staticClass: _vm._$g("7-" + $30, "sc"),
-                      attrs: { _i: "7-" + $30 }
+                      staticClass: _vm._$g("9-" + $30, "sc"),
+                      attrs: { _i: "9-" + $30 }
                     },
                     [
                       _c(
                         "v-uni-text",
                         {
-                          staticClass: _vm._$g("8-" + $30, "sc"),
-                          attrs: { _i: "8-" + $30 }
+                          staticClass: _vm._$g("10-" + $30, "sc"),
+                          attrs: { _i: "10-" + $30 }
                         },
                         [
                           _vm._v(
-                            _vm._$g("8-" + $30, "t0-0") +
+                            _vm._$g("10-" + $30, "t0-0") +
                               "、" +
-                              _vm._$g("8-" + $30, "t0-1")
+                              _vm._$g("10-" + $30, "t0-1")
                           ),
                           _c(
                             "v-uni-text",
                             {
-                              staticClass: _vm._$g("9-" + $30, "sc"),
-                              attrs: { _i: "9-" + $30 }
+                              staticClass: _vm._$g("11-" + $30, "sc"),
+                              attrs: { _i: "11-" + $30 }
                             },
-                            [_vm._v("-" + _vm._$g("9-" + $30, "t0-0"))]
+                            [_vm._v("-" + _vm._$g("11-" + $30, "t0-0"))]
                           )
                         ],
                         1
@@ -3855,10 +3867,10 @@ var render = function() {
                       _c(
                         "v-uni-text",
                         {
-                          staticClass: _vm._$g("10-" + $30, "sc"),
-                          attrs: { _i: "10-" + $30 }
+                          staticClass: _vm._$g("12-" + $30, "sc"),
+                          attrs: { _i: "12-" + $30 }
                         },
-                        [_vm._v(_vm._$g("10-" + $30, "t0-0"))]
+                        [_vm._v(_vm._$g("12-" + $30, "t0-0"))]
                       )
                     ],
                     1
@@ -4269,7 +4281,296 @@ if(false) {}
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../../Software/HBuilderX/plugins/uniapp-cli/node_modules/css-loader/dist/runtime/api.js */ 15);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, "\n.music-from-list .head{\r\n\tposition: relative;\r\n\tdisplay: block;\r\n\twidth: 750rpx;\r\n\theight: 40vh;\r\n\toverflow: hidden;\n}\n.music-from-list .head .head-img{\r\n\twidth: 100%;\r\n\theight: 100%;\n}\n.music-from-list .head .list-name{\r\n\tposition: absolute;\r\n\tz-index: 999;\r\n\tbottom: 0;\r\n\tleft: 30rpx;\r\n\tline-height: 10vh;\r\n\tcolor: #00ACE9;\r\n\tfont-weight: bold;\n}\n.music-from-list .play-list{\r\n\tposition: fixed;\r\n\tbottom: 100rpx;\r\n\tz-index: 20;\r\n\twidth: 750rpx;\r\n\theight: 710rpx;\r\n\tbackground-color: #fff;\r\n\tborder-radius: 40rpx 40rpx 0 0;\r\n\tborder-bottom: 1rpx solid #eee;\r\n\toverflow: hidden;\r\n\t-webkit-transition-duration: .5s;\r\n\t        transition-duration: .5s;\n}\n.music-from-list .play-list .play-list-head{\r\n\tdisplay: block;\r\n\twidth: 750rpx;\r\n\theight: 79rpx;\r\n\tcolor: #000;\r\n\tborder-bottom: 1rpx solid #eee;\r\n\tbackground-color: #00ACE9;\n}\n.music-from-list .play-list .play-list-head .play-list-title{\r\n\tdisplay: inline-block;\r\n\tpadding-left: 30rpx;\r\n\tcolor: #fff;\r\n\tline-height: 79rpx;\r\n\tfont-size: 30rpx;\n}\n.music-from-list .play-list .play-list-head .play-list-btn{\r\n\tvertical-align: top;\r\n\tfloat: right;\r\n\tmargin: 20rpx 30rpx 20rpx 0;\n}\n.music-from-list .play-list .play-list-wrap{\r\n\twidth: 750rpx;\r\n\theight: 640rpx;\r\n\toverflow-x: hidden;\r\n\toverflow-y: auto;\n}\n.music-from-list .play-list-wrap .play-list-music-info{\r\n\tdisplay: block;\r\n\tpadding-left: 30rpx;\r\n\twidth: 720rpx;\r\n\theight: 79rpx;\r\n\tfont-size: 30rpx;\r\n\tline-height: 80rpx;\r\n\tborder-bottom: 1rpx solid #eee;\r\n\tcolor: #000;\n}\n.music-from-list .play-list-wrap .play-list-music-info .info-wrap{\r\n\tfloat: left;\r\n\twidth: 600rpx;\r\n\theight: 80rpx;\r\n\toverflow: hidden;\r\n\twhite-space:nowrap;\r\n\ttext-overflow:ellipsis;\n}\n.music-from-list .play-list-wrap .play-list-music-info .time{\r\n\tfloat: right;\r\n\tmargin-right: 30rpx;\n}\n.music-from-list .play-list-wrap .play-list-music-info .singer{\r\n\tmargin-left: 10rpx;\r\n\tfont-size: 20rpx;\r\n\tcolor: #666;\n}\n", ""]);
+exports.push([module.i, ".music-from-list {\r\n\tposition: fixed;\r\n\tz-index: 9999;\r\n\ttop: 0;\r\n\tbottom: 0;\r\n\twidth: 100%;\n}\n.music-from-list .head{\r\n\tposition: relative;\r\n\tdisplay: block;\r\n\twidth: 750rpx;\r\n\theight: 40vh;\r\n\toverflow: hidden;\n}\n.music-from-list .title-btn{\r\n\tposition: absolute;\r\n\tz-index: 2;\r\n\tmargin: 2.25vh 3vh;\r\n\tborder-radius: 50%;\r\n\tbackground: #131419;\r\n\tbox-shadow:  5px 5px 10px #08080a;\n}\n.music-from-list .head .head-img{\r\n\twidth: 100%;\r\n\theight: 100%;\n}\n.music-from-list .head .list-name{\r\n\tposition: absolute;\r\n\tz-index: 999;\r\n\tbottom: 0;\r\n\tleft: 30rpx;\r\n\tline-height: 10vh;\r\n\tcolor: #00ACE9;\r\n\tfont-weight: bold;\n}\n.music-from-list .play-list{\r\n\tposition: fixed;\r\n\tbottom: 100rpx;\r\n\tz-index: 20;\r\n\twidth: 750rpx;\r\n\theight: 710rpx;\r\n\tbackground-color: #fff;\r\n\tborder-radius: 40rpx 40rpx 0 0;\r\n\tborder-bottom: 1rpx solid #eee;\r\n\toverflow: hidden;\r\n\t-webkit-transition-duration: .5s;\r\n\t        transition-duration: .5s;\n}\n.music-from-list .play-list .play-list-head{\r\n\tdisplay: block;\r\n\twidth: 750rpx;\r\n\theight: 79rpx;\r\n\tcolor: #000;\r\n\tborder-bottom: 1rpx solid #eee;\r\n\tbackground-color: #00ACE9;\n}\n.music-from-list .play-list .play-list-head .play-list-title{\r\n\tdisplay: inline-block;\r\n\tpadding-left: 30rpx;\r\n\tcolor: #fff;\r\n\tline-height: 79rpx;\r\n\tfont-size: 30rpx;\n}\n.music-from-list .play-list .play-list-head .play-list-btn{\r\n\tvertical-align: top;\r\n\tfloat: right;\r\n\tmargin: 20rpx 30rpx 20rpx 0;\n}\n.music-from-list .play-list .play-list-wrap{\r\n\twidth: 750rpx;\r\n\theight: 640rpx;\r\n\toverflow-x: hidden;\r\n\toverflow-y: auto;\n}\n.music-from-list .play-list-wrap .play-list-music-info{\r\n\tdisplay: block;\r\n\tpadding-left: 30rpx;\r\n\twidth: 720rpx;\r\n\theight: 79rpx;\r\n\tfont-size: 30rpx;\r\n\tline-height: 80rpx;\r\n\tborder-bottom: 1rpx solid #eee;\r\n\tcolor: #000;\n}\n.music-from-list .play-list-wrap .play-list-music-info .info-wrap{\r\n\tfloat: left;\r\n\twidth: 600rpx;\r\n\theight: 80rpx;\r\n\toverflow: hidden;\r\n\twhite-space:nowrap;\r\n\ttext-overflow:ellipsis;\n}\n.music-from-list .play-list-wrap .play-list-music-info .time{\r\n\tfloat: right;\r\n\tmargin-right: 30rpx;\n}\n.music-from-list .play-list-wrap .play-list-music-info .singer{\r\n\tmargin-left: 10rpx;\r\n\tfont-size: 20rpx;\r\n\tcolor: #666;\n}\n", ""]);
+// Exports
+module.exports = exports;
+
+
+/***/ }),
+/* 115 */
+/*!*********************************************************************!*\
+  !*** E:/uniappWorkSpace/TinaTong/component/bw-swiper/bw-swiper.vue ***!
+  \*********************************************************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _bw_swiper_vue_vue_type_template_id_42bd27f6___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./bw-swiper.vue?vue&type=template&id=42bd27f6& */ 116);
+/* harmony import */ var _bw_swiper_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./bw-swiper.vue?vue&type=script&lang=js& */ 118);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _bw_swiper_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _bw_swiper_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+/* harmony import */ var _bw_swiper_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./bw-swiper.vue?vue&type=style&index=0&lang=css& */ 120);
+/* harmony import */ var _Software_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../Software/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/runtime/componentNormalizer.js */ 18);
+
+var renderjs
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_Software_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
+  _bw_swiper_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _bw_swiper_vue_vue_type_template_id_42bd27f6___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _bw_swiper_vue_vue_type_template_id_42bd27f6___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null,
+  false,
+  _bw_swiper_vue_vue_type_template_id_42bd27f6___WEBPACK_IMPORTED_MODULE_0__["components"],
+  renderjs
+)
+
+component.options.__file = "uniappWorkSpace/TinaTong/component/bw-swiper/bw-swiper.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+/* 116 */
+/*!****************************************************************************************************!*\
+  !*** E:/uniappWorkSpace/TinaTong/component/bw-swiper/bw-swiper.vue?vue&type=template&id=42bd27f6& ***!
+  \****************************************************************************************************/
+/*! exports provided: render, staticRenderFns, recyclableRender, components */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Software_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_Software_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_16_0_Software_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_filter_modules_template_js_Software_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_page_meta_js_Software_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_bw_swiper_vue_vue_type_template_id_42bd27f6___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../Software/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../Software/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--16-0!../../../../Software/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/filter-modules-template.js!../../../../Software/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/page-meta.js!../../../../Software/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./bw-swiper.vue?vue&type=template&id=42bd27f6& */ 117);
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _Software_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_Software_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_16_0_Software_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_filter_modules_template_js_Software_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_page_meta_js_Software_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_bw_swiper_vue_vue_type_template_id_42bd27f6___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _Software_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_Software_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_16_0_Software_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_filter_modules_template_js_Software_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_page_meta_js_Software_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_bw_swiper_vue_vue_type_template_id_42bd27f6___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "recyclableRender", function() { return _Software_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_Software_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_16_0_Software_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_filter_modules_template_js_Software_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_page_meta_js_Software_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_bw_swiper_vue_vue_type_template_id_42bd27f6___WEBPACK_IMPORTED_MODULE_0__["recyclableRender"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "components", function() { return _Software_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_Software_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_16_0_Software_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_filter_modules_template_js_Software_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_page_meta_js_Software_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_bw_swiper_vue_vue_type_template_id_42bd27f6___WEBPACK_IMPORTED_MODULE_0__["components"]; });
+
+
+
+/***/ }),
+/* 117 */
+/*!********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--16-0!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/filter-modules-template.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/page-meta.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!E:/uniappWorkSpace/TinaTong/component/bw-swiper/bw-swiper.vue?vue&type=template&id=42bd27f6& ***!
+  \********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns, recyclableRender, components */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "recyclableRender", function() { return recyclableRender; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "components", function() { return components; });
+var components
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "v-uni-view",
+    { staticClass: _vm._$g(0, "sc"), attrs: { _i: 0 } },
+    [
+      _c(
+        "v-uni-swiper",
+        {
+          staticClass: _vm._$g(1, "sc"),
+          class: _vm._$g(1, "c"),
+          style: _vm._$g(1, "s"),
+          attrs: {
+            "indicator-dots": _vm._$g(1, "a-indicator-dots"),
+            "indicator-active-color": _vm._$g(1, "a-indicator-active-color"),
+            "indicator-color": _vm._$g(1, "a-indicator-color"),
+            autoplay: _vm._$g(1, "a-autoplay"),
+            current: _vm._$g(1, "a-current"),
+            interval: _vm._$g(1, "a-interval"),
+            duration: _vm._$g(1, "a-duration"),
+            circular: _vm._$g(1, "a-circular"),
+            vertical: _vm._$g(1, "a-vertical"),
+            "previous-margin": _vm._$g(1, "a-previous-margin"),
+            "next-margin": _vm._$g(1, "a-next-margin"),
+            "display-multiple-items": _vm._$g(1, "a-display-multiple-items"),
+            "skip-hidden-item-layout": _vm._$g(1, "a-skip-hidden-item-layout"),
+            _i: 1
+          },
+          on: {
+            change: function($event) {
+              return _vm.$handleViewEvent($event)
+            },
+            animationfinish: function($event) {
+              return _vm.$handleViewEvent($event)
+            }
+          }
+        },
+        _vm._l(_vm._$g(2, "f"), function(item, index, $20, $30) {
+          return _c(
+            "v-uni-swiper-item",
+            {
+              key: item,
+              staticClass: _vm._$g("2-" + $30, "sc"),
+              class: _vm._$g("2-" + $30, "c"),
+              attrs: { _i: "2-" + $30 },
+              on: {
+                click: function($event) {
+                  return _vm.$handleViewEvent($event)
+                }
+              }
+            },
+            [
+              _vm._$g("3-" + $30, "i")
+                ? _c(
+                    "v-uni-view",
+                    { attrs: { _i: "3-" + $30 } },
+                    [
+                      _c("v-uni-image", {
+                        style: _vm._$g("4-" + $30, "s"),
+                        attrs: {
+                          src: _vm._$g("4-" + $30, "a-src"),
+                          _i: "4-" + $30
+                        }
+                      }),
+                      _vm._$g("5-" + $30, "i")
+                        ? _c(
+                            "v-uni-text",
+                            {
+                              staticClass: _vm._$g("5-" + $30, "sc"),
+                              style: _vm._$g("5-" + $30, "s"),
+                              attrs: { _i: "5-" + $30 }
+                            },
+                            [_vm._v(_vm._$g("5-" + $30, "t0-0"))]
+                          )
+                        : _vm._e()
+                    ],
+                    1
+                  )
+                : _vm._e(),
+              _vm._$g("6-" + $30, "i")
+                ? _c(
+                    "v-uni-view",
+                    { attrs: { _i: "6-" + $30 } },
+                    [
+                      _c("v-uni-video", {
+                        style: _vm._$g("7-" + $30, "s"),
+                        attrs: {
+                          src: _vm._$g("7-" + $30, "a-src"),
+                          autoplay: true,
+                          loop: true,
+                          muted: true,
+                          autoplay: _vm._$g("7-" + $30, "a-autoplay"),
+                          objectFit: "cover",
+                          _i: "7-" + $30
+                        },
+                        on: {
+                          play: function($event) {
+                            return _vm.$handleViewEvent($event)
+                          },
+                          pause: function($event) {
+                            return _vm.$handleViewEvent($event)
+                          }
+                        }
+                      })
+                    ],
+                    1
+                  )
+                : _vm._e()
+            ],
+            1
+          )
+        }),
+        1
+      )
+    ],
+    1
+  )
+}
+var recyclableRender = false
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+/* 118 */
+/*!**********************************************************************************************!*\
+  !*** E:/uniappWorkSpace/TinaTong/component/bw-swiper/bw-swiper.vue?vue&type=script&lang=js& ***!
+  \**********************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Software_HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_Software_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_12_1_Software_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_view_script_js_Software_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_using_components_js_Software_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_bw_swiper_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../Software/HBuilderX/plugins/uniapp-cli/node_modules/babel-loader/lib!../../../../Software/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--12-1!../../../../Software/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/view/script.js!../../../../Software/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/using-components.js!../../../../Software/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./bw-swiper.vue?vue&type=script&lang=js& */ 119);
+/* harmony import */ var _Software_HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_Software_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_12_1_Software_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_view_script_js_Software_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_using_components_js_Software_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_bw_swiper_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_Software_HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_Software_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_12_1_Software_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_view_script_js_Software_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_using_components_js_Software_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_bw_swiper_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _Software_HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_Software_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_12_1_Software_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_view_script_js_Software_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_using_components_js_Software_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_bw_swiper_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _Software_HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_Software_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_12_1_Software_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_view_script_js_Software_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_using_components_js_Software_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_bw_swiper_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+ /* harmony default export */ __webpack_exports__["default"] = (_Software_HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_Software_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_12_1_Software_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_view_script_js_Software_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_using_components_js_Software_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_bw_swiper_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0___default.a); 
+
+/***/ }),
+/* 119 */
+/*!***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--12-1!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/view/script.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/using-components.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!E:/uniappWorkSpace/TinaTong/component/bw-swiper/bw-swiper.vue?vue&type=script&lang=js& ***!
+  \***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default =
+
+{
+  name: "bw-swiper",
+  data: function data() {
+    return {
+      wxsProps: {} };
+
+  },
+  components: {} };exports.default = _default;
+
+/***/ }),
+/* 120 */
+/*!******************************************************************************************************!*\
+  !*** E:/uniappWorkSpace/TinaTong/component/bw-swiper/bw-swiper.vue?vue&type=style&index=0&lang=css& ***!
+  \******************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Software_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_app_vue_style_loader_index_js_ref_6_oneOf_1_0_Software_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_6_oneOf_1_1_Software_HBuilderX_plugins_uniapp_cli_node_modules_css_loader_dist_cjs_js_ref_6_oneOf_1_2_Software_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_loaders_stylePostLoader_js_Software_HBuilderX_plugins_uniapp_cli_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_3_Software_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_bw_swiper_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../Software/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/app-vue-style-loader??ref--6-oneOf-1-0!../../../../Software/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--6-oneOf-1-1!../../../../Software/HBuilderX/plugins/uniapp-cli/node_modules/css-loader/dist/cjs.js??ref--6-oneOf-1-2!../../../../Software/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/loaders/stylePostLoader.js!../../../../Software/HBuilderX/plugins/uniapp-cli/node_modules/postcss-loader/src??ref--6-oneOf-1-3!../../../../Software/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./bw-swiper.vue?vue&type=style&index=0&lang=css& */ 121);
+/* harmony import */ var _Software_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_app_vue_style_loader_index_js_ref_6_oneOf_1_0_Software_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_6_oneOf_1_1_Software_HBuilderX_plugins_uniapp_cli_node_modules_css_loader_dist_cjs_js_ref_6_oneOf_1_2_Software_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_loaders_stylePostLoader_js_Software_HBuilderX_plugins_uniapp_cli_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_3_Software_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_bw_swiper_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_Software_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_app_vue_style_loader_index_js_ref_6_oneOf_1_0_Software_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_6_oneOf_1_1_Software_HBuilderX_plugins_uniapp_cli_node_modules_css_loader_dist_cjs_js_ref_6_oneOf_1_2_Software_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_loaders_stylePostLoader_js_Software_HBuilderX_plugins_uniapp_cli_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_3_Software_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_bw_swiper_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _Software_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_app_vue_style_loader_index_js_ref_6_oneOf_1_0_Software_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_6_oneOf_1_1_Software_HBuilderX_plugins_uniapp_cli_node_modules_css_loader_dist_cjs_js_ref_6_oneOf_1_2_Software_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_loaders_stylePostLoader_js_Software_HBuilderX_plugins_uniapp_cli_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_3_Software_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_bw_swiper_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _Software_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_app_vue_style_loader_index_js_ref_6_oneOf_1_0_Software_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_6_oneOf_1_1_Software_HBuilderX_plugins_uniapp_cli_node_modules_css_loader_dist_cjs_js_ref_6_oneOf_1_2_Software_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_loaders_stylePostLoader_js_Software_HBuilderX_plugins_uniapp_cli_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_3_Software_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_bw_swiper_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+ /* harmony default export */ __webpack_exports__["default"] = (_Software_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_app_vue_style_loader_index_js_ref_6_oneOf_1_0_Software_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_6_oneOf_1_1_Software_HBuilderX_plugins_uniapp_cli_node_modules_css_loader_dist_cjs_js_ref_6_oneOf_1_2_Software_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_loaders_stylePostLoader_js_Software_HBuilderX_plugins_uniapp_cli_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_3_Software_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_bw_swiper_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0___default.a); 
+
+/***/ }),
+/* 121 */
+/*!******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/app-vue-style-loader??ref--6-oneOf-1-0!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--6-oneOf-1-1!./node_modules/css-loader/dist/cjs.js??ref--6-oneOf-1-2!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--6-oneOf-1-3!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!E:/uniappWorkSpace/TinaTong/component/bw-swiper/bw-swiper.vue?vue&type=style&index=0&lang=css& ***!
+  \******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(/*! !../../../../Software/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--6-oneOf-1-1!../../../../Software/HBuilderX/plugins/uniapp-cli/node_modules/css-loader/dist/cjs.js??ref--6-oneOf-1-2!../../../../Software/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/loaders/stylePostLoader.js!../../../../Software/HBuilderX/plugins/uniapp-cli/node_modules/postcss-loader/src??ref--6-oneOf-1-3!../../../../Software/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./bw-swiper.vue?vue&type=style&index=0&lang=css& */ 122);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var add = __webpack_require__(/*! ../../../../Software/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/app-vue-style-loader/lib/addStylesClient.js */ 16).default
+var update = add("5d9c3618", content, false, {"sourceMap":false,"shadowMode":false});
+// Hot Module Replacement
+if(false) {}
+
+/***/ }),
+/* 122 */
+/*!**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--6-oneOf-1-1!./node_modules/css-loader/dist/cjs.js??ref--6-oneOf-1-2!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--6-oneOf-1-3!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!E:/uniappWorkSpace/TinaTong/component/bw-swiper/bw-swiper.vue?vue&type=style&index=0&lang=css& ***!
+  \**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// Imports
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../../Software/HBuilderX/plugins/uniapp-cli/node_modules/css-loader/dist/runtime/api.js */ 15);
+exports = ___CSS_LOADER_API_IMPORT___(false);
+// Module
+exports.push([module.i, "\n.cardSwiper .swiper-item{\r\n\twidth:86%!important; \r\n\toverflow: initial;\n}\n.cardSwiper .swiper-item uni-view{\n\twidth: 100%;\n\tdisplay: block;\n\theight: 100%;\n\tborder-radius: 10upx;\n\t-webkit-transform: scale(0.93,0.8);\n\t        transform: scale(0.93,0.8);\r\n\topacity: 0.7;\n\t-webkit-transition: all 0.1s ease-in 0s;\n\ttransition: all 0.1s ease-in 0s;\n\toverflow: hidden;\r\n\tbox-sizing: border-box;\r\n\tmargin-left:8.1%;\n}\n.cardSwiper .cur  uni-view{\r\n\t-webkit-transform:  initial;\r\n\t        transform:  initial;\r\n\topacity: 1;\n\t-webkit-transition: all 0.1s ease-in 0s;\n\ttransition: all 0.1s ease-in 0s;\n}\n.swiper-item uni-view{\r\n\theight:100%;\r\n\twidth:100%;\r\n\tposition: relative;\n}\n.swiperText{\r\n\tposition: absolute;\r\n\tcolor:#ffffff;\r\n\tz-index:2;\r\n\tborder-radius: 4upx;\r\n\tpadding:0 4upx;\n}\n.screen-swiper uni-image{\r\n\twidth:100%;\n}\n.screen-swiper uni-video,\n.swiper-item uni-video {\n\twidth: 100%;\n\tdisplay: block;\n\theight: 100%;\n}\n.swiperContent{\r\n\twidth:100%;\n}\n", ""]);
 // Exports
 module.exports = exports;
 
